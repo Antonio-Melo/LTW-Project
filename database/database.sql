@@ -1,4 +1,4 @@
---sqlite3 -init restaurant.sql restaurant.db
+--sqlite3 -init database.sql database.db
 
 CREATE TABLE restaurant (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -18,10 +18,11 @@ CREATE TABLE user (
   username VARCHAR PRIMARY KEY,
   name VARCHAR Not NULL,
   email VARCHAR Unique Not NULL,
-  password VARCHAR Not NULL 
+  password VARCHAR Not NULL
 );
 
 INSERT INTO restaurant VALUES (NUll, 'Amizade', 'Boa amizade', 'Amizade assim de tudo');
 
 INSERT INTO comment VALUES (NUll, 1,'cliente 1', 'Fiquei satisfeito com a amizade');
 
+INSERT INTO user VALUES (NUll, 'Nome', 'mail', 'Password' );

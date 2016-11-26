@@ -21,7 +21,6 @@
       $stmt->execute();
     }
   
-
   function SetRestName($db, $id, $name){
     $stmt = $db->prepare('UPDATE restaurant SET name = ? WHERE id = ?');
     $stmt->execute(array($name, $id));
@@ -43,5 +42,4 @@
     $stmt->execute();
 
   }
-
   ?>
