@@ -1,6 +1,9 @@
 <?php
-
-$db = new PDO('sqlite:database/restaurante.db');
-
-//http://gnomo.fe.up.pt/~up201405342/projeto/database/connection.php -->
+  try {
+     $db = new PDO('sqlite:database/restaurant.db');
+     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); 
+     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  } catch (PDOException $e) {
+     die($e->getMessage());
+  }
 ?>
