@@ -18,11 +18,10 @@
 		return $stmt->fetch();
 	}
 
-	function getUserPassword($db,$username){
-		$stmt = $db->prepare('SELECT password FROM user WHERE username = ? ');
-		$stmt->execute(array($username));
-		$result =$stmt->fetch();
-		return $result;
+	function getUserPassword($db,$username, $hashPass){
+		$stmt = $db->prepare('SELECT * FROM user WHERE username = ? AND password = ?');
+		$stmt->execute(array($username, $hashPass));
+		return $stmt->fetch() !== false;
 	}
 
 	function setUserName($db, $username, $name){

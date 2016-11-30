@@ -4,21 +4,22 @@
      include_once('database/user.php');
      include_once('database/conection.php');
 
-     $username = $_POST['username'];
-     $hashPass=md5($_POST['password']);
-
-   /*var_dump($username);
-    var_dump($hashPass);
-    var_dump($db);*/
-
-    echo('____');
-    $pass = getUserPassword($db,$username);
-    var_dump($pass);
-   // var_dump($hashPass);
-    if($pass == $hashPass )
-     var_dump('pass certa');
-    else
-      var_dump('pass errada');
-
+    try {
+          $username = $_POST['username'];
+          $hashPass=md5($_POST['password']);
+        if(getUserPassword($db,$username, $hashPass))
+          {
+            echo("valid");
+            return "true";
+          }
+        else
+          {
+              echo("error");
+              return "Invalid UserName or Password";
+          }
+    } 
+    catch (PDOException $e) {
+      echo $e->getMessage();
+    }
     include_once('templates/footer');
 ?>

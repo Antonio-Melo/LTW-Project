@@ -8,6 +8,7 @@ echo('aqui');
       $name = $_POST['name'];
       $email = $_POST['email'];
       $hashPass=md5($_POST['password']);
+      $hashPass=md5($_POST['confirm']);
       $dateBirth=$_POST['dateBirth'];
     
     addUser($db, $username, $name, $email, $hashPass, $dateBirth);

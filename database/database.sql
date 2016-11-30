@@ -19,7 +19,7 @@ CREATE TABLE user (
   name VARCHAR(25),
   email VARCHAR(25) Unique,
   password VARCHAR(25),
-  dateBirth DATE 
+  dateBirth DATE
 );
 
 INSERT INTO restaurant VALUES (NUll, 'Amizade', 'Boa amizade', 'Amizade assim de tudo');

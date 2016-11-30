@@ -18,6 +18,9 @@
       <label>Password:
         <input type="password" name="password"><br><br>
       </label>
+       <label>Confirm password:
+        <input type="password" name="confirm"><br><br>
+      </label>
       <label>Date of Birth:
         <input type="date" name="dateBirth"><br><br>
       </label>
