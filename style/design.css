@@ -1,0 +1,9 @@
+h1 {
+  color: #5F9EA0;
+  font-family: 'Dancing Script', cursive;
+}
+
+
+div#menu {
+  background-image: url('squares.png');
+}

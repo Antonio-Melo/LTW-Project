@@ -3,6 +3,7 @@
     include_once('database/connection.php');
     include_once('database/comment.php');
     include_once('database/restaurant.php');
+    
 
     $comments = getAllComments($db);
 
@@ -11,6 +12,11 @@
     include('templates/header.php');
 
 ?>
+
+
+
+
+
 
     <?php
 include('templates/footer.php');
