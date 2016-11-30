@@ -1,23 +1,9 @@
 <?php
-	function addUser($db, $username, $name, $email, $password, $dateBirth){
-		echo('nao passa daqui');
-		/*$stmt = $db->prepare('INSERT INTO user (username, name, email, password, dateBirth) 
-                       VALUES (:username, :name, :email, :password, :dateBirth)');
-		$stmt->bindParam(':name', $name);
-		$stmt->bindParam(':username', $username);
-		$stmt->bindParam(':email', $email);
-		$stmt->bindParam(':password', $password);
-		$stmt->bindParam(':dateBirth', $dateBirth);
-		
-		$stmt->execute();*/
-
+	function addUser($db, $username, $name, $email, $password, $datebirth){
 		$stmt = $db->prepare('INSERT INTO user (username, name, email, password, dateBirth) 
 									 VALUES (?, ?, ?, ?, ?)');
-		$stmt->execute(array($username, $name, $email, $password, $dateBirth));
-
-			echo('chegou');
-
-	
+		$stmt->execute(array($username, $name, $email, $password, $datebirth));
+		echo('add User complete');
 	}
 
 	function getAllUsers($db) {
