@@ -4,11 +4,13 @@
     include_once('database/comment.php');
     include_once('database/restaurant.php');
 
-    $comments = getAllComments($db);
+    //$comments = getAllComments($db);
 
-    var_dump($comments);
+    //var_dump($comments);
 
     include('templates/header.php');
+
+    include('templates/homepage.php');
 
 ?>
 
