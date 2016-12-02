@@ -1,3 +1,15 @@
+
+body{
+  background-image: url('resources/background.jpg');
+  /*background-color: white;
+  width: 65% vw;
+  height: 65% vw;
+  margin-right: 250px;
+  margin-left: 250px;
+  margin-top: 0px;*/
+}
+
+
 h1 {
   color: #5F9EA0;
   font-family: 'Dancing Script', cursive;
@@ -5,9 +17,6 @@ h1 {
 }
 
 
-div#menu {
-  background-image: url('squares.png');
-}
 
 /* Slideshow container */
 .slideshow-container {
