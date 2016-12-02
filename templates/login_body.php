@@ -1,22 +1,22 @@
-
-<html>
-  <head>
-    <title>create User</title>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <form action="login.php" method="post">
-      <label>UserName:
-        <input type="text" name="username"></label><br><br>
-      </label>
-      <label>Password:
-        <input type="password" name="password"><br><br>
-      </label>
-      <input type="submit" value="login">
-    </form>
-  </body>
-</html>
-
 <?php
-//http://gnomo.fe.up.pt/~up201405342/projeto/login_body.php
+    if(isset($_SESSION['username'])){
 ?>
+
+<label> Logged in as:
+    <a href="editeProfile_body.php?username"> <?php echo($_SESSION['username']);?>   </a>   
+</label>
+<a href="../action/logout.php">Logout</a>
+<?php }else{ ?>
+
+<form id="loginForm" action="../action/login.php" method="post">
+  <label>Username:
+       <input type="text" name="username"> 
+  </label>
+  <label>Password:
+       <input type="password" name="password"> 
+  </label>
+  <input type="submit" value="Login">
+    <a href="register.php">Register </a>
+</form>
+<?php } ?>
+

@@ -21,7 +21,11 @@
 	function getUserPassword($db,$username, $hashPass){
 		$stmt = $db->prepare('SELECT * FROM user WHERE username = ? AND password = ?');
 		$stmt->execute(array($username, $hashPass));
-		return $stmt->fetch() !== false;
+
+		if($stmt->fetch())
+		return true;
+		else 
+		return false;
 	}
 
 	function setUserName($db, $username, $name){
