@@ -5,7 +5,7 @@
   <script type="text/javascript" src="scripts/slideshowHomepage.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 </head>
-<body>
+<body background="style/resources/backgroundImg.jpg">
   <div id="header">
     <h1>Food & Good Vibes</h1>
 
