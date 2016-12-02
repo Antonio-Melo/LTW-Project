@@ -1,16 +1,4 @@
 
-<h1>Food & Good Vibes</h1>
-
-<button type="button"><em class="Image"></em></button>
-
-<div id="menu">
-    <ul>
-      <li><a href="">Homepage</a></li>
-      <li><a href="">Take me to a Restaurant</a></li>
-      <li><a href="">Login</a></li>
-    </ul>
-</div>
-
 <div class="slideshow-container">
  <div class="mySlides fade">
    <div class="numbertext">1 / 4</div>
