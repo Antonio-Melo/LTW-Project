@@ -11,10 +11,10 @@
 
 <form id="loginForm" action="../action/login.php" method="post">
   <label>Username:
-       <input type="text" name="username"> 
+       <input type="text" name="username" required="required"> 
   </label>
   <label>Password:
-       <input type="password" name="password"> 
+       <input type="password" name="password" required="required"> 
   </label>
   <input type="submit" value="Login">
     <a href="register.php">Register </a>

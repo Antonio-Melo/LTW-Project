@@ -9,7 +9,6 @@
       $hashPass=md5($_POST['password']);
       $hashPassConfirm=md5($_POST['confirm']);
       $dateBirth=$_POST['dateBirth'];
-      echo('aqui');
 
         if(! empty($name))
           setUserName($db, $username, $name);
@@ -24,5 +23,4 @@
           setUserDate($db, $username, $dateBirth);
 
       header('Location: ../templates/header.php');
-
 ?>

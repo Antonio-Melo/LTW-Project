@@ -4,7 +4,6 @@ echo('include create.php');
      include_once('../database/user.php');
 
 
-
       $username = $_POST['username'];
       $name = $_POST['name'];
       $email = $_POST['email'];
@@ -12,9 +11,11 @@ echo('include create.php');
       $hashPassConfirm=md5($_POST['confirm']);
       $dateBirth=$_POST['dateBirth'];
 
-      if($hashPass != $hashPassConfirm || empty($hashPass)) 
+      if($hashPass != $hashPassConfirm) 
              header('Location: ../templates/register.php');
     
+    var_dump($hashPass);
+    var_dump($hashPassConfirm);
 
     if(!getUser($db,$username)){
         if(! getEmail($db,$email))
@@ -28,7 +29,7 @@ echo('include create.php');
         header('Location: ../templates/register.php');
         }
 
-        header('Location: ../templates/header.php');
+       // header('Location: ../templates/header.php');
 ?>
 
 
