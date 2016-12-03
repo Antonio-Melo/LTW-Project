@@ -19,7 +19,7 @@
       $stmt->bindParam(':introdution',$introductio);
       $stmt->bindParam(':description',$description);
       $stmt->execute();
-    }
+  }
   
   function SetRestName($db, $id, $name){
     $stmt = $db->prepare('UPDATE restaurant SET name = ? WHERE id = ?');
@@ -40,6 +40,5 @@
     $stmt= $db->prepare('DELETE FROM restaurant WHERE name = ?');
     $stmt->bind_param(array($name));
     $stmt->execute();
-
   }
-  ?>
+?>

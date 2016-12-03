@@ -27,3 +27,5 @@ INSERT INTO restaurant VALUES (NUll, 'Amizade', 'Boa amizade', 'Amizade assim de
 INSERT INTO comment VALUES (NUll, 1,'cliente 1', 'Fiquei satisfeito com a amizade');
 
 INSERT INTO user VALUES ('username', 'Nome', 'mail', 'password','1996-11-11');
+
+--delete from user;
