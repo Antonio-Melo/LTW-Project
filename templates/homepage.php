@@ -1,3 +1,8 @@
+<?php
+////http://gnomo.fe.up.pt/~up201403205/LTW/LTW-Project/templates/homepage.php
+  include_once('design.css');
+  include_once('header.php');
+?>
 
 <div class="slideshow-container">
  <div class="mySlides fade">
@@ -39,3 +44,7 @@
 <form action=header.php method=get >
     <input type=submit value='Back' />
 </form>
+
+<?php
+  include_once('footer.php');
+?>

@@ -16,14 +16,11 @@
       <ul>
         <li><a href="homepage.php">Homepage</a></li>
         <li><a href="">Take me to a Restaurant</a></li>
-        <li> <?php include_once('login_body.php'); ?> </li>
-        <?php  if(isset($_SESSION['username'])) {?> <li><a href="addRestaurant_body.php">Add Restaurant</a></li> <?php } ?>
+        <li><a href="login_body.php">Login</a><li>
       </ul>
     </div>
 </div>
 
 <?php
  include_once('footer.php');
-  
-////http://gnomo.fe.up.pt/~up201405342/projeto/templates/header.php
 ?>
