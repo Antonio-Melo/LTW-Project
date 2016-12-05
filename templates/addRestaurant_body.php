@@ -2,7 +2,7 @@
 session_start();
     if(isset($_SESSION['username'])){?>
 
-<form  action="../action/addRestaurant.php" method="post">
+<form  action="../action/addRestaurant.php?owner=<?php echo($_SESSION['id'])?>" method="post">
     <h1> Add a restaurant </h1>
     <label>Restaurant name
         <input name="name" type="text" required="required" /></br>

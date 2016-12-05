@@ -1,20 +1,23 @@
 <?php
-	function getAllComments($db) {
+echo('include comment');
+	function getAllComments() {
+    global $db;
 		$stmt = $db->prepare('SELECT * FROM comment');
 		$stmt->execute();
 		return $stmt->fetchAll();
 	}
 
-  function addComment($db, $id, $restaurantId, $author, $critic){
-    $stmt = $db->prepare('INSERT INTO commment Values(:id, :restaurantId, :author, :critic) ');
-    $stmt->bindParam(':id', $id);
-    $stmt->bindParam(':restaurantId', $restaurantId);
-    $stmt->bindParam(':author', $author);
-    $stmt->bindParam(':critic', $critic);
-    $stmt->execute();
+  function addComment($restaurantId, $userId, $content, $evaluation){
+    global $db;
+   
+    $stmt = $db->prepare('INSERT INTO comment Values(Null, ?, ?, ?, ?)');
+    $stmt->execute(array($restaurantId, $userId, $content, $evaluation));
+    echo('add comment complete');
+   
   }
 
-  function deleteComment($db, $id){
+  function deleteComment($id){
+    global $db;
     $stmt = $db->prepare('DELETE FROM comment where id = ?');
     $stmt->bind_param(array($id));
     $stmt->execute();

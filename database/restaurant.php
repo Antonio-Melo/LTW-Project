@@ -1,42 +1,46 @@
 <?php
   echo('include restaurant.php');
-	function getAllRestaurants($db) {
+	function getAllRestaurants() {
+    global $db;
 		$stmt = $db->prepare('SELECT * FROM restaurant');
 		$stmt->execute();
 		return $stmt->fetchAll();
 	}
 
-  function getRestaurantName($db, $name) {
+  function getRestaurant($name) {
+    global $db;
     $stmt = $db->prepare('SELECT * FROM restaurant WHERE name = ?');
     $stmt->execute(array($name));
     return $stmt->fetch();
   }
 
-  function addRestaurant($db,$name, $type, $description){
-      $stmt =$db->prepare('INSERT INTO restaurant (name, type, description)
-                                      VALUES(:name, :type, :description)');
-      $stmt->bindParam(':name',$name);
-      $stmt->bindParam(':type',$type);
-      $stmt->bindParam(':description',$description);
-      $stmt->execute();
+  function addRestaurant($name, $type, $description, $owner){
+      global $db;
+      $stmt =$db->prepare('INSERT INTO restaurant (id, name, type, description, owner)
+                                      VALUES(NULL, ?, ?, ?, ?)');
+      $stmt->execute(array($name, $type, $description, $owner));
   }
-  /*
-  function SetRestName($db, $id, $name){
+
+  function SetRestName($id, $name){
+    global $db;
     $stmt = $db->prepare('UPDATE restaurant SET name = ? WHERE id = ?');
     $stmt->execute(array($name, $id));
-  }*/
+  }
  
-  function SetRestDescri($db, $name, $description){
-    $stmt = $db->prepare('UPDATE restaurant SET description = ? WHERE name = ?');
-    $stmt->execute(array($description, $name));
+  function SetRestDescri($id, $description){
+    global $db;
+    $stmt = $db->prepare('UPDATE restaurant SET description = ? WHERE id = ?');
+    $stmt->execute(array($description, $id));
   }
 
-  function SetRestType($db, $name, $type){
-    $stmt = $db->prepare('UPDATE restaurant SET type = ? WHERE name = ?');
-    $stmt->execute(array($type, $name));
+  function SetRestType($id, $type){
+    global $db;
+    $stmt = $db->prepare('UPDATE restaurant SET type = ? WHERE id = ?');
+    $stmt->execute(array($type, $id));
   }
 
-  function DeleteRestaurant($db, $name){
+  function DeleteRestaurant($name){
+    global $db;
     $stmt= $db->prepare('DELETE FROM restaurant WHERE name = ?');
     $stmt->execute(array($name));
   }

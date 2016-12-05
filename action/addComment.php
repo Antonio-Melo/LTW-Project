@@ -3,13 +3,14 @@
     include_once('../database/connection.php');
     include_once('../database/comment.php');
 
-      $name = $_POST['name'];
-      $description = $_POST['description'];
-      $type = $_POST['type'];
-      $owner = $_GET['owner'];
-        
-    addRestaurant($db, $name, $type, $description, $owner);
-    header('Location: ../templates/addRestaurant_body.php');
+
+      $restaurantId = $_GET['restaurantId'];
+      $userId = $_GET['userId'];
+      $content = $_POST['content'];
+      $evaluation = $_POST['evaluation'];
+
+    addComment($restaurantId, $userId, $content, $evaluation);
+   header('Location: ../templates/listRestaurant.php');
 ?>
 
 

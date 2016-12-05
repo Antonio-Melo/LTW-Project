@@ -1,6 +1,5 @@
 <?php
-session_start();
-  //include_once('../home.php');
+  session_start();
   include_once('../database/connection.php');
   include_once('../database/restaurant.php');
  
@@ -12,17 +11,14 @@ session_start();
   echo '<h3>' .  $result['name'] . '</h3>';
   echo '<p>' . $result['description'] .'</p>';
   echo '</div>';
-     echo('aqui');
 ?>
 
 <?php
   if(isset($_SESSION['username'])){
-     $id = $_SESSION['id'];
-     echo('dentro');
-?>
+     $id = $_SESSION['id'];?>
 
-<form action="../action/addComment.php?userId=<?php echo($_SESSION['id']) ?>&restaurantId=<?php echo($restaurant['id']) ?>" class="comment" method="post">
-  <label>Evaluation: [
+<form action="../action/addComment.php?userId=<?php echo($_SESSION['id']) ?> &restaurantId=<?php echo($restaurant['id']) ?>" class="comment" method="post">
+  <label>Classification: [
     1:<input type="radio" name="evaluation" value="1"></input> 
     2:<input type="radio" name="evaluation" value="2"></input> 
     3:<input type="radio" name="evaluation" value="3" checked></input> 
@@ -37,7 +33,7 @@ session_start();
   <button class="CommentButton"> Post </button>
 </form>
 
-<?php  echo('fim');}
+<?php }
 
 /*
 $reviews = getReviews($id);

@@ -11,16 +11,16 @@
       $dateBirth=$_POST['dateBirth'];
 
         if(! empty($name))
-          setUserName($db, $username, $name);
+          setUserName($username, $name);
 
           if(! empty($hashPass))
-          setUserPassword($db, $username, $hashPass);
+          setUserPassword($username, $hashPass);
 
         if(! empty($email))
-          setUserEmail($db, $username, $email);
+          setUserEmail($username, $email);
 
             if(! empty($dateBirth))
-          setUserDate($db, $username, $dateBirth);
+          setUserDate($username, $dateBirth);
 
-      header('Location: ../templates/header.php');
+      header('Location: ../home.php');
 ?>

@@ -1,30 +1,40 @@
 --sqlite3 -init database.sql database.db
 
 CREATE TABLE restaurant (
-	name VARCHAR(25) Unique,
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name VARCHAR Unique,
 	type VARCHAR,
-	description VARCHAR
-);
+	description VARCHAR,
+	owner INTEGER REFERENCES user(id));
+
+CREATE TABLE answer(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	restaurantId INTEGER REFERENCES restaurant(id),
+	userId INTEGER REFERENCES user(id),
+	commentId INTEGER REFERENCES comment(id),
+	content VARCHAR(255));
 
 CREATE TABLE comment (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	restaurant_id INTEGER REFERENCES restaurant,
-	author VARCHAR(25),
-	critic VARCHAR(255)
-);
+	restaurantId INTEGER REFERENCES restaurant(id),
+	userId INTEGER REFERENCES user(id),
+	content VARCHAR(255),
+	evaluation INTEGER);
 
 CREATE TABLE user (
-  username VARCHAR(25) PRIMARY KEY,
-  name VARCHAR(25),
-  email VARCHAR(25) Unique,
-  password VARCHAR(25),
-  dateBirth DATE
-);
+	id INTEGER PRIMARY KEY AUTOINCREMENT, 
+ 	username VARCHAR unique,
+  	name VARCHAR,
+  	email VARCHAR Unique,
+  	password VARCHAR,
+  	dateBirth DATE);
 
-INSERT INTO restaurant VALUES ('Name','type', 'description');
+INSERT INTO restaurant VALUES (1,'Name','type', 'description',1);
 
-INSERT INTO comment VALUES (NUll, 1,'cliente 1', 'Fiquei satisfeito com a amizade');
+INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito com a amizade', 5);
 
-INSERT INTO user VALUES ('username', 'Nome', 'mail', 'password','1996-11-11');
+INSERT INTO user VALUES (1,'username', 'Nome', 'mail', 'password','1996-11-11');
+INSERT INTO user VALUES (2,'lazaro', 'lazaro', 'lazaro', '827ccb0eea8a706c4c34a16891f84e7b','1996-11-11');
 
+INSERT INTO answer VALUES(1, 1, 1, 1, 'foi pessimo');
 --delete from user;

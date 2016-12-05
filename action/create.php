@@ -17,9 +17,9 @@ echo('include create.php');
     var_dump($hashPass);
     var_dump($hashPassConfirm);
 
-    if(!getUser($db,$username)){
-        if(! getEmail($db,$email))
-                addUser($db, $username, $name, $email, $hashPass, $dateBirth);
+    if(!getUser($username)){
+        if(! getEmail($email))
+                addUser($username, $name, $email, $hashPass, $dateBirth);
             else{
                 echo('email ja usado');
                 header('Location: ../templates/register.php');}
@@ -29,7 +29,7 @@ echo('include create.php');
         header('Location: ../templates/register.php');
         }
 
-       // header('Location: ../templates/header.php');
+        header('Location: ../home.php');
 ?>
 
 

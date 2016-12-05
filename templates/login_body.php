@@ -1,5 +1,3 @@
-<?php  if(isset($_SESSION['username'])) {?> <li><a href="addRestaurant_body.php">Add Restaurant</a></li> <?php } ?>
-
 <?php
      session_start();
     if(isset($_SESSION['username'])){
