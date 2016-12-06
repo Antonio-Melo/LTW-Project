@@ -1,15 +1,11 @@
 <?php
-    echo('include addComment.php');
+    echo('include addAnswer.php');
     include_once('../database/connection.php');
     include_once('../database/comment.php');
 
 
-      $restaurantId = $_GET['restaurantId'];
-      $userId = $_GET['userId'];
-      $content = $_POST['content'];
-      $evaluation = $_POST['evaluation'];
 
-    addComment($restaurantId, $userId, $content, $evaluation);
+// adicionar uma resposta a um comentario
    header('Location: ../templates/listRestaurant.php');
 ?>
 
