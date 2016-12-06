@@ -1,9 +1,9 @@
 <?php
 echo('include comment');
-	function getAllComments() {
+	function getAllComments($restaurantId) {
     global $db;
-		$stmt = $db->prepare('SELECT * FROM comment');
-		$stmt->execute();
+		$stmt = $db->prepare('SELECT * FROM comment where restaurantId= ?');
+		$stmt->execute(array($restaurantId));
 		return $stmt->fetchAll();
 	}
 

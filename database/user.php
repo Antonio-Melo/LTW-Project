@@ -22,6 +22,12 @@
 		$stmt->execute(array($username));
 		return $stmt->fetch();
 	}
+		function getUsername($id) {
+		global $db;
+		$stmt = $db->prepare('SELECT username FROM user WHERE id = ?');
+		$stmt->execute(array($id));
+		return $stmt->fetch();
+	}
 
 	function getEmail($email) {
 		global $db;

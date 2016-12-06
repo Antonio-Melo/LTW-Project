@@ -1,8 +1,9 @@
 <?php
-	function getAllAnswer() {
+echo('include answer');
+	function getAllAnswer($commentId) {
     global $db;
-		$stmt = $db->prepare('SELECT * FROM answer');
-		$stmt->execute();
+		$stmt = $db->prepare('SELECT * FROM answer where commentId = ?');
+		$stmt->execute(array($commentId));
 		return $stmt->fetchAll();
 	}
 
@@ -12,10 +13,9 @@
     $stmt->execute(array($restaurantId, $userId, $commentId,$content));
   }
 
-  function deleteComment($id){
+  function deleteAnswer($id){
     global $db;
     $stmt = $db->prepare('DELETE FROM answer where id = ?');
-    $stmt->bind_param(array($id));
-    $stmt->execute();
+    $stmt->execute(array($id));
   }
 ?>
