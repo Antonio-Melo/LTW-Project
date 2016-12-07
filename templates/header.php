@@ -23,5 +23,6 @@
 </div>
 
 <?php
+//http://gnomo.fe.up.pt/~up201405342/LTW-Project/templates/header.php
  include_once('footer.php');
 ?>

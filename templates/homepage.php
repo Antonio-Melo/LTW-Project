@@ -7,25 +7,25 @@
 <div class="slideshow-container">
  <div class="mySlides fade">
    <div class="numbertext">1 / 4</div>
-   <img src="style/resources/img1.jpg" style="width:100%">
+   <img src="../style/resources/img1.jpg" style="width:50%">
    <div class="text">Top 10 Restaurants of the Month</div>
  </div>
 
  <div class="mySlides fade">
    <div class="numbertext">2 / 4</div>
-   <img src="style/resources/img2.jpg" style="width:100%">
+   <img src="../style/resources/img2.jpg" style="width:50%">
    <div class="text">New Restaurants</div>
  </div>
 
  <div class="mySlides fade">
    <div class="numbertext">3 / 4</div>
-   <img src="style/resources/img3.jpg" style="width:100%">
+   <img src="../style/resources/img3.jpg" style="width:50%">
    <div class="text">International Food</div>
  </div>
 
  <div class="mySlides fade">
    <div class="numbertext">4 / 4</div>
-   <img src="style/resources/img4.jpg" style="width:100%">
+   <img src="../style/resources/img4.jpg" style="width:50%">
    <div class="text">Vegan Options</div>
  </div>
 

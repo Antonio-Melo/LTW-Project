@@ -29,7 +29,9 @@ CREATE TABLE user (
   	password VARCHAR,
   	dateBirth DATE);
 
-INSERT INTO restaurant VALUES (1,'Name','type', 'description',1);
+INSERT INTO restaurant VALUES (1,'Name','type1', 'description',1);
+INSERT INTO restaurant VALUES (2,'Name2','type1', 'description1',1);
+INSERT INTO restaurant VALUES (3,'Name3','type1', 'description1',1);
 
 INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito com a amizade', 5);
 INSERT INTO comment VALUES (2, 1, 2, 'Fiquei satisfeito com a amizade', 3);
