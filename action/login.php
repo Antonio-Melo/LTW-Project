@@ -4,10 +4,10 @@ echo('include login.php');
     include_once('../database/connection.php');
 
     session_start();
-  $username = trim(strip_tags($_POST['username']));
+    $username = trim(strip_tags($_POST['username']));
     $password = $_POST['password'];
     var_dump($username);
-   
+
  echo('aqui');
    if (verifyUser($username, $password)) {
  echo('aqui');
@@ -15,10 +15,10 @@ echo('include login.php');
         $info =  getUser($username);
         $_SESSION['id'] = $info['id'];
         echo($_SESSION['username']);
-    }    
+    }
     else
         echo('erro');
          echo('aqui');
-        
+
     header('Location: ../home.php');
 ?>
