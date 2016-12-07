@@ -4,22 +4,22 @@ echo('include create.php');
      include_once('../database/user.php');
 
 
-      $username = $_POST['username'];
+      $username = trim(strip_tags($_POST['username']));
       $name = $_POST['name'];
       $email = $_POST['email'];
-      $hashPass=md5($_POST['password']);
-      $hashPassConfirm=md5($_POST['confirm']);
+      $password=$_POST['password'];
+      $confirm=$_POST['confirm'];
       $dateBirth=$_POST['dateBirth'];
 
-      if($hashPass != $hashPassConfirm) 
+      if($password != $confirm) 
              header('Location: ../templates/register.php');
     
-    var_dump($hashPass);
-    var_dump($hashPassConfirm);
+    var_dump($password);
+    var_dump($confirm);
 
     if(!getUser($username)){
         if(! getEmail($email))
-                addUser($username, $name, $email, $hashPass, $dateBirth);
+                addUser($username, $name, $email, $password, $dateBirth);
             else{
                 echo('email ja usado');
                 header('Location: ../templates/register.php');}

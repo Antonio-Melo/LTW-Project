@@ -37,9 +37,7 @@ INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito com a amizade', 5);
 INSERT INTO comment VALUES (2, 1, 2, 'Fiquei satisfeito com a amizade', 3);
 INSERT INTO comment VALUES (3, 1, 1, 'Fiquei satisfeito com a amizade', 4);
 
-
 INSERT INTO user VALUES (1,'username', 'Nome', 'mail', 'password','1996-11-11');
-INSERT INTO user VALUES (2,'lazaro', 'lazaro', 'lazaro', '827ccb0eea8a706c4c34a16891f84e7b','1996-11-11');
 
 INSERT INTO answer VALUES(1, 1, 1, 1, 'foi pessimo');
 INSERT INTO answer VALUES(2, 1, 2, 1, 'foi pessimo');

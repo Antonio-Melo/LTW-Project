@@ -4,18 +4,21 @@ echo('include login.php');
     include_once('../database/connection.php');
 
     session_start();
-    $username = $_POST['username'];
-    $hashPass=md5($_POST['password']);
-    echo($hashPass);
-
-    if(getUserPassword($username, $hashPass)){
+  $username = trim(strip_tags($_POST['username']));
+    $password = $_POST['password'];
+    var_dump($username);
+   
+ echo('aqui');
+   if (verifyUser($username, $password)) {
+ echo('aqui');
+        $_SESSION['username'] = $username;
         $info =  getUser($username);
-        $_SESSION['username'] = $info['username'];
         $_SESSION['id'] = $info['id'];
         echo($_SESSION['username']);
-    }
+    }    
     else
         echo('erro');
+         echo('aqui');
         
     header('Location: ../home.php');
 ?>

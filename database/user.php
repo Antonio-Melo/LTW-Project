@@ -1,14 +1,23 @@
 <?php
 	echo('include user.php');
 
-	function addUser($username, $name, $email, $hashPass, $datebirth){
+	function addUser($username, $name, $email, $password, $datebirth){
 		global $db;
+		 $options = ['cost' => 12];
+    	 $hashPass = password_hash($password, PASSWORD_DEFAULT, $options);
 		$stmt = $db->prepare('INSERT INTO user (id, username, name, email, password, dateBirth) 
 									 VALUES (Null, ?, ?, ?, ?, ?)');
 		$stmt->execute(array($username, $name, $email, $hashPass, $datebirth));
 		echo('add User complete');
 	}
 
+	function verifyUser($username, $password) {
+		global $db;  
+		$stmt = $db->prepare('SELECT * FROM user WHERE username = ?');
+		$stmt->execute(array($username));
+		$user = $stmt->fetch();
+		return ($user !== false && password_verify($password, $user['password']));
+	}
 	function getAllUsers() {
 		global $db;
 		$stmt = $db->prepare('SELECT * FROM user');
