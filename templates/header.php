@@ -17,7 +17,10 @@
         <li><a href="homepage.php">Homepage</a></li>
         <li><a href="">Take me to a Restaurant</a></li>
         <li> <?php include_once('login_body.php'); ?></li>
-             <?php  if(isset($_SESSION['username'])) {?> <li><a href="addRestaurant_body.php">Add Restaurant</a></li> <?php } ?>
+        <?php  if(isset($_SESSION['username'])) {?>
+        <li><a href="addRestaurant_body.php">Add Restaurant</a></li>
+        <?php } ?>
+        <li><?php include_once('searchRestaurant.php'); ?></li>
       </ul>
     </div>
 </div>

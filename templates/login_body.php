@@ -1,7 +1,4 @@
-<?php
-     session_start();
-    if(isset($_SESSION['username'])){
-?>
+<?php if(isset($_SESSION['username'])) { ?>
 
 <label> Logged in as:
     <a href="editeProfile_body.php"> <?php echo($_SESSION['username']);?>   </a>
