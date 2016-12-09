@@ -9,11 +9,13 @@
 <form id="loginForm" action="../action/login.php" method="post">
   <label>Username:
        <input type="text" name="username" required="required">
-  </label>
+  </label><br>
   <label>Password:
        <input type="password" name="password" required="required">
   </label>
-  <input type="submit" value="Login">
-    <a href="register.php">Register </a>
+  <br><input type="submit" value="Login">
+</form>
+<form action="register.php">
+  <input type="submit" value="Register" />
 </form>
 <?php } ?>
