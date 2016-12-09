@@ -1,3 +1,3 @@
 <?php
-      header('Location: templates/header.php');
+      header('Location: templates/homepage.php');
 ?>

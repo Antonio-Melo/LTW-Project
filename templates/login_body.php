@@ -1,7 +1,7 @@
 <?php if(isset($_SESSION['username'])) { ?>
 
 <label> Logged in as:
-    <a href="editeProfile_body.php"> <?php echo($_SESSION['username']);?>   </a>
+    <a href="../pages/editeProfile.php"> <?php echo($_SESSION['username']);?>   </a>
 </label>
 <a href="../action/logout.php">Logout</a>
 <?php }else{ ?>

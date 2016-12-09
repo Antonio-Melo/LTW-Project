@@ -8,7 +8,6 @@
 		$stmt = $db->prepare('INSERT INTO user (id, username, name, email, password, dateBirth) 
 									 VALUES (Null, ?, ?, ?, ?, ?)');
 		$stmt->execute(array($username, $name, $email, $hashPass, $datebirth));
-		echo('add User complete');
 	}
 
 	function verifyUser($username, $password) {
@@ -18,6 +17,7 @@
 		$user = $stmt->fetch();
 		return ($user !== false && password_verify($password, $user['password']));
 	}
+
 	function getAllUsers() {
 		global $db;
 		$stmt = $db->prepare('SELECT * FROM user');
@@ -31,7 +31,8 @@
 		$stmt->execute(array($username));
 		return $stmt->fetch();
 	}
-		function getUsername($id) {
+	
+	function getUsername($id) {
 		global $db;
 		$stmt = $db->prepare('SELECT username FROM user WHERE id = ?');
 		$stmt->execute(array($id));
@@ -61,8 +62,12 @@
 
 	function setUserPassword($username, $password){
 		global $db;
+		$options = ['cost' => 12];
+    	$hashPass = password_hash($password, PASSWORD_DEFAULT, $options);
 		$stmt = $db->prepare('UPDATE user SET password = ? WHERE username = ?');
-		$stmt->execute(array($password, $username));
+		var_dump($stmt);
+		$stmt->execute(array($hashPass, $username));
+		echo($hashPass);
 	}
 
 	function setUserEmail($username, $email){

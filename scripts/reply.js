@@ -57,5 +57,5 @@ function PageLoaded(){
   $('form.review').submit(VerifyEmpty);
   $('a.delete-review').on('click',ClearReview);
   $('a.delete-comment').on('click',ClearComment);
-  $('a.delete-comment').on('click',ClearComment);
+
 }

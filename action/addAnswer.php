@@ -6,7 +6,7 @@
     include_once('../database/answer.php');
     include_once('../database/user.php');
 
-      header('Location: ' . $_SERVER['HTTP_REFERER']);
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
     if(!isset($_SESSION['username'])){
         exit();
     }

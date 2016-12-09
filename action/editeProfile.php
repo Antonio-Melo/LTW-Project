@@ -6,15 +6,16 @@
 
       $name = $_POST['name'];
       $email = $_POST['email'];
-      $hashPass=md5($_POST['password']);
-      $hashPassConfirm=md5($_POST['confirm']);
+      $password =$_POST['password'];
+      $hashPassConfirm=$_POST['confirm'];
       $dateBirth=$_POST['dateBirth'];
+
 
         if(! empty($name))
           setUserName($username, $name);
 
-          if(! empty($hashPass))
-          setUserPassword($username, $hashPass);
+          if(!empty($password))
+          setUserPassword($username, $password);
 
         if(! empty($email))
           setUserEmail($username, $email);

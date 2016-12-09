@@ -5,19 +5,19 @@
     <label>Username: <?php echo($_SESSION['username']); ?><br>
      </label>
     <label>Name:
-        <input type="text" name="name"><br>
+       <input type="text" name="name" value="<?=$user['name']?>" required> <br>
     </label>
       <label>Email:
-        <input type="e-mail" name="email"><br>
+        <input type="e-mail" name="email" value="<?=$user['email']?>" required><br>
       </label>
       <label>New Password:
-        <input type="password" name="password"><br>
+        <input type="password" name="password" ><br>
       </label>
       <label>Confirm password:
-        <input type="password" name="confirm"><br>
+        <input type="password" name="confirm" ><br>
       </label>
       <label>Date of Birth:
-        <input type="date" name="dateBirth"><br>
+        <input type="date" name="dateBirth" value="<?=$user['dateBirth']?>" required><br>
       </label>
       <input type="submit" value="edite">
     </form>

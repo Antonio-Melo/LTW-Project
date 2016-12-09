@@ -14,6 +14,13 @@
     return $stmt->fetch();
   }
 
+    function getRestaurantOwner($name) {
+    global $db;
+    $stmt = $db->prepare('SELECT * FROM restaurant WHERE owner = ?');
+    $stmt->execute(array($name));
+    return $stmt->fetchAll();
+  }
+
   function addRestaurant($name, $type, $description, $owner){
       global $db;
       $stmt =$db->prepare('INSERT INTO restaurant (id, name, type, description, owner)
