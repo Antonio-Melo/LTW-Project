@@ -7,10 +7,10 @@ echo('include answer');
 		return $stmt->fetchAll();
 	}
 
-  function addAnswer($restaurantId, $userId, $commentId, $content){
+  function addAnswer( $userId, $commentId, $content){
     global $db;
-    $stmt = $db->prepare('INSERT INTO commment Values(Null, ?, ?, ?, ?)');
-    $stmt->execute(array($restaurantId, $userId, $commentId,$content));
+    $stmt = $db->prepare('INSERT INTO answer Values(Null, ?, ?, ?)');
+    $stmt->execute(array($userId, $commentId, $content));
   }
 
   function deleteAnswer($id){

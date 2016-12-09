@@ -9,7 +9,6 @@ CREATE TABLE restaurant (
 
 CREATE TABLE answer(
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	restaurantId INTEGER REFERENCES restaurant(id),
 	userId INTEGER REFERENCES user(id),
 	commentId INTEGER REFERENCES comment(id),
 	content VARCHAR(255));
@@ -38,9 +37,10 @@ INSERT INTO comment VALUES (2, 1, 2, 'Fiquei satisfeito com a amizade', 3);
 INSERT INTO comment VALUES (3, 1, 1, 'Fiquei satisfeito com a amizade', 4);
 
 INSERT INTO user VALUES (1,'username', 'Nome', 'mail', 'password','1996-11-11');
+INSERT INTO user VALUES (2,'username2', 'Nome2', 'mail1', 'password','1946-11-11');
 
-INSERT INTO answer VALUES(1, 1, 1, 1, 'foi pessimo');
-INSERT INTO answer VALUES(2, 1, 2, 1, 'foi pessimo');
-INSERT INTO answer VALUES(3, 1, 2, 1, 'foi pessimo');
-INSERT INTO answer VALUES(4, 1, 1, 1, 'foi pessimo');
+INSERT INTO answer VALUES(1, 1, 1, 'foi pessimo');
+INSERT INTO answer VALUES(2, 2, 1, 'foi pessimo');
+INSERT INTO answer VALUES(3, 2, 1, 'foi pessimo');
+INSERT INTO answer VALUES(4, 1, 1, 'foi pessimo');
 --delete from user;

@@ -10,6 +10,9 @@
   $restaurant = getRestaurant($name);
   $restaurantId = $restaurant['id'];
 ?>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="../scripts/reply.js"></script>
 <?php
   echo '<div class="restaurantInfo">';
   echo '<h3>' . $restaurant['name'] . '</h3>';
@@ -19,7 +22,7 @@
 
 <?php
   if(isset($_SESSION['username'])){
-     $id = $_SESSION['id']; ?>
+     $sessionId = $_SESSION['id']; ?>
 
 <form action="../action/addComment.php?userId=<?php echo($_SESSION['id']) ?> &restaurantId=<?php echo($restaurant['id']) ?>" class="comment" method="post">
   <label>Classification: [
@@ -49,6 +52,7 @@
 <?php
 foreach ($comments as $comment) {
     $userId = $comment['userId'];
+    $commentId = $comment['id']; 
     $user = getUsername($userId);?>
     <li>
       <h4>
@@ -60,11 +64,11 @@ foreach ($comments as $comment) {
       <p> <?php echo $comment['content']?> </p>
     <?php
       if(isset($_SESSION['username'])){?>
-          <a class="reply" reviewID=<?php echo '"'.$review['id'].'"' ?> ;> Answer </a>
+          <a class="reply" commentId=<?php echo '"'.$commentId.'"' ?> ;> Answer </a>
     <?php
       if(isset($_SESSION['id']))
         if($_SESSION['id'] == $comment['userId']) { ?>
-          <a class="delete-review" reviewID=<?php echo '"'.$review['id'].'"' ?> ;> Delete </a>
+          <a class="delete-review" commentId=<?php echo '"'.$commentId.'"' ?> ;> Delete </a>
           <?php
         }
       }
