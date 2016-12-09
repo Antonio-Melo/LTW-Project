@@ -11,7 +11,7 @@
 
       $restaurantId = $_GET['restaurantId'];
       $userId = $_GET['userId'];
-      $content = $_POST['content'];
+      $content = htmlentities($_POST['content'], ENT_QUOTES, "UTF-8");
       $evaluation = $_POST['evaluation'];
 
     addComment($restaurantId, $userId, $content, $evaluation);

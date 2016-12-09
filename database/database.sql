@@ -1,11 +1,11 @@
---sqlite3 -init database.sql database.db
 
 CREATE TABLE restaurant (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	name VARCHAR Unique,
 	type VARCHAR,
 	description VARCHAR,
-	owner INTEGER REFERENCES user(id));
+	owner INTEGER REFERENCES user(id),
+	rating FLOAT);
 
 CREATE TABLE answer(
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -28,19 +28,39 @@ CREATE TABLE user (
   	password VARCHAR,
   	dateBirth DATE);
 
-INSERT INTO restaurant VALUES (1,'Name','type1', 'description',1);
-INSERT INTO restaurant VALUES (2,'Name2','type1', 'description1',1);
-INSERT INTO restaurant VALUES (3,'Name3','type1', 'description1',1);
+CREATE TRIGGER updateRatingRestaurant AFTER INSERT ON comment
+BEGIN
+	UPDATE restaurant SET rating = (
+		SELECT AVG(evaluation) 
+		FROM restaurant JOIN comment
+		 ON (restaurant.id = NEW.restaurantId)
+		GROUP BY (restaurantId)
+		HAVING (restaurantId = NEW.restaurantId)
+	)
+	WHERE (restaurant.id = NEW.restaurantId);
+END;
+
+INSERT INTO restaurant VALUES (1,'Name1','typfe1', 'description0', 1, 4.1);
+INSERT INTO restaurant VALUES (2,'Name2','tyfpe1', 'description1', 1, 3.7);
+INSERT INTO restaurant VALUES (3,'Name3','typfe1', 'description1', 2, 2.7);
+INSERT INTO restaurant VALUES (4,'Nameas1','ftype1', 'description0', 2, 4.8);
+INSERT INTO restaurant VALUES (5,'Nameas2','type1', 'description1', 3, 3.7);
+INSERT INTO restaurant VALUES (6,'Namase3','type1', 'description1', 3, 2.7);
+INSERT INTO restaurant VALUES (7,'Namase2','type1', 'description1', 4, 3.7);
+INSERT INTO restaurant VALUES (8,'Nameasa3','type1', 'description1', 4, 2.7);
+INSERT INTO restaurant VALUES (9,'Namasase1','type1', 'description0', 5, 4.8);
+INSERT INTO restaurant VALUES (10,'Nameasas2','type1', 'description1', 6, 3.7);
+INSERT INTO restaurant VALUES (11,'Nameasas3','type1', 'description1', 7, 2.7);
+
 
 INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito com a amizade', 5);
 INSERT INTO comment VALUES (2, 1, 2, 'Fiquei satisfeito com a amizade', 3);
 INSERT INTO comment VALUES (3, 1, 1, 'Fiquei satisfeito com a amizade', 4);
 
 INSERT INTO user VALUES (1,'username', 'Nome', 'mail', 'password','1996-11-11');
-INSERT INTO user VALUES (2,'username2', 'Nome2', 'mail1', 'password','1946-11-11');
+INSERT INTO user VALUES (5,'username2', 'Nome2', 'mail1', 'password','1946-11-11');
 
 INSERT INTO answer VALUES(1, 1, 1, 'foi pessimo');
 INSERT INTO answer VALUES(2, 2, 1, 'foi pessimo');
 INSERT INTO answer VALUES(3, 2, 1, 'foi pessimo');
 INSERT INTO answer VALUES(4, 1, 1, 'foi pessimo');
---delete from user;

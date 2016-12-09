@@ -1,10 +1,7 @@
 <?php
 	include_once('../database/connection.php');
 	include_once('../database/user.php');
-	include_once('../database/images.php');
-	include_once('../database/restaurants.php');
-	include_once('../database/reviews.php');
-	
+	include_once('../database/restaurant.php');	
 	
 	$username = $_GET['username'];
 	try{

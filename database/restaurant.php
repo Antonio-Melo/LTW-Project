@@ -14,10 +14,10 @@
     return $stmt->fetch();
   }
 
-    function getRestaurantOwner($name) {
+    function getRestaurantOwner($owner) {
     global $db;
     $stmt = $db->prepare('SELECT * FROM restaurant WHERE owner = ?');
-    $stmt->execute(array($name));
+    $stmt->execute(array($owner));
     return $stmt->fetchAll();
   }
 
