@@ -10,7 +10,7 @@
 		die($e->getMessage());
 	}
 	
-	$cssPath = "../css/profile.css";
+	
 	include('../templates/header.php');
 	include('../templates/profile.php');
 	include('../templates/footer.php');
