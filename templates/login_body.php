@@ -14,6 +14,6 @@
        <input type="password" name="password" required="required">
   </label>
   <input type="submit" value="Login">
-    <a href="register.php">Register </a>
+  <a href="../pages/register.php">Register </a>
 </form>
 <?php } ?>

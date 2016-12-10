@@ -1,9 +1,3 @@
-<?php
-////http://gnomo.fe.up.pt/~up201403205/LTW/LTW-Project/templates/homepage.php
-  include_once('design.css');
-  include_once('header.php');
-?>
-
 <div class="slideshow-container">
  <div class="mySlides fade">
    <div class="numbertext">1 / 4</div>
@@ -40,11 +34,3 @@
  <span class="dot" onclick="currentSlide(3)"></span>
  <span class="dot" onclick="currentSlide(4)"></span>
 </div>
-
-<form action=header.php method=get >
-    <input type=submit value='Back' />
-</form>
-
-<?php
-  include_once('footer.php');
-?>
