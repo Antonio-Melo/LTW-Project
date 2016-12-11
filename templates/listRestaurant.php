@@ -78,10 +78,11 @@ foreach ($comments as $comment) {
       $answers = getAllAnswer($comment['id']);
         foreach($answers as $answer){
             $owner = $answer['userId'];
-            $userAnswer = getUsername($owner);?>
+            $userAnswer = getUsername($owner);
+            var_dump($userAnswer);?>
               <li>
                 <h5>
-                  <a href="../pages/profile.php?username=<?php echo $userAnswer['username']?>" ?>
+                  <a href="../pages/profile.php?username=<?php echo $userAnswer['username']?>">
                     <?php echo $userAnswer['username'] ?>
                   </a>
                 </h5>
@@ -90,15 +91,13 @@ foreach ($comments as $comment) {
                 </p>
               <?php if(isset($_SESSION['id']))
                       if($_SESSION['id'] == $answer['userId']) { ?>
-                        <a class="delete-comment" commentID=<?php echo '"'.$answer['id'].'"' ?> ;> Delete </a><?php }?>
+                        <a class="delete-comment" commentID=<?php echo ''.$answer['id'].'"' ?> ;> Delete </a><?php }?>
               </li>
         <?php
         } ?>
   </ul>
     </li>
-<?php
-}?>
+<?php }?>
 </ul>
 </div>
-<?php include_once('../templates/footer.php');
-?>
+<?php include_once('../templates/footer.php');?>
