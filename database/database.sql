@@ -28,7 +28,8 @@ CREATE TABLE user (
   	password VARCHAR,
   	dateBirth DATE);
 
-CREATE TRIGGER updateRatingRestaurant AFTER INSERT ON comment
+CREATE TRIGGER updateRatingRestaurant 
+AFTER INSERT ON comment
 BEGIN
 	UPDATE restaurant SET rating = (
 		SELECT AVG(evaluation) 
@@ -39,6 +40,15 @@ BEGIN
 	)
 	WHERE (restaurant.id = NEW.restaurantId);
 END;
+
+
+CREATE TRIGGER deleteComments 
+BEFORE 
+	DELETE ON comment 
+	FOR EACH ROW BEGIN DELETE FROM answer 
+	WHERE answer.commentId  = OLD.id; 
+END;
+
 
 INSERT INTO restaurant VALUES (1,'Name1','typfe1', 'description0', 1, 4.1);
 INSERT INTO restaurant VALUES (2,'Name2','tyfpe1', 'description1', 1, 3.7);
@@ -57,8 +67,12 @@ INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito com a amizade', 5);
 INSERT INTO comment VALUES (2, 1, 2, 'Fiquei satisfeito com a amizade', 3);
 INSERT INTO comment VALUES (3, 1, 1, 'Fiquei satisfeito com a amizade', 4);
 
-INSERT INTO user VALUES (1,'username', 'Nome', 'mail', 'password','1996-11-11');
-INSERT INTO user VALUES (5,'username2', 'Nome2', 'mail1', 'password','1946-11-11');
+INSERT INTO user VALUES (1,'username1', 'Nome1', 'mail1', 'password','1996-11-11');
+INSERT INTO user VALUES (2,'username2', 'Nome2', 'mail2', 'password','1946-11-11');
+INSERT INTO user VALUES (3,'username3', 'Nome2', 'mail3', 'password','1946-11-11');
+INSERT INTO user VALUES (4,'username4', 'Nome2', 'mail4', 'password','1946-11-11');
+INSERT INTO user VALUES (5,'username5', 'Nome2', 'mail5', 'password','1946-11-11');
+INSERT INTO user VALUES (6,'username6', 'Nome2', 'mail6', 'password','1946-11-11');
 
 INSERT INTO answer VALUES(1, 1, 1, 'foi pessimo');
 INSERT INTO answer VALUES(2, 2, 1, 'foi pessimo');

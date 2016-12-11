@@ -10,7 +10,7 @@ echo('include create.php');
       $password=$_POST['password'];
       $confirm=$_POST['confirm'];
       $dateBirth=$_POST['dateBirth'];
-      $avatar=$_FILES['avatar'];
+      //$avatar=$_FILES['avatar'];
       var_dump($avatar);
 
       if($password != $confirm)
@@ -33,5 +33,5 @@ echo('include create.php');
         header('Location: ../templates/register.php');
         }
 
-        //header('Location: ../home.php');
+        header('Location: ../home.php');
 ?>
