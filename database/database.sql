@@ -69,12 +69,12 @@ INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito com a amizade', 5);
 INSERT INTO comment VALUES (2, 1, 2, 'Fiquei satisfeito com a amizade', 3);
 INSERT INTO comment VALUES (3, 1, 1, 'Fiquei satisfeito com a amizade', 4);
 
-INSERT INTO user VALUES (1,'username1', 'Nome1', 'mail1', 'password','1996-11-11');
-INSERT INTO user VALUES (2,'username2', 'Nome2', 'mail2', 'password','1946-11-11');
-INSERT INTO user VALUES (3,'username3', 'Nome2', 'mail3', 'password','1946-11-11');
-INSERT INTO user VALUES (4,'username4', 'Nome2', 'mail4', 'password','1946-11-11');
-INSERT INTO user VALUES (5,'username5', 'Nome2', 'mail5', 'password','1946-11-11');
-INSERT INTO user VALUES (6,'username6', 'Nome2', 'mail6', 'password','1946-11-11');
+INSERT INTO user VALUES (1,'username1', 'Nome1', 'mail1', 'password','1996-11-11','../database/avatars/default_avatar.png');
+INSERT INTO user VALUES (2,'username2', 'Nome2', 'mail2', 'password','1946-11-11','../database/avatars/default_avatar.png');
+INSERT INTO user VALUES (3,'username3', 'Nome2', 'mail3', 'password','1946-11-11','../database/avatars/default_avatar.png');
+INSERT INTO user VALUES (4,'username4', 'Nome2', 'mail4', 'password','1946-11-11','../database/avatars/default_avatar.png');
+INSERT INTO user VALUES (5,'username5', 'Nome2', 'mail5', 'password','1946-11-11','../database/avatars/default_avatar.png');
+INSERT INTO user VALUES (6,'username6', 'Nome2', 'mail6', 'password','1946-11-11','../database/avatars/default_avatar.png');
 
 INSERT INTO answer VALUES(1, 1, 1, 'foi pessimo');
 INSERT INTO answer VALUES(2, 2, 1, 'foi pessimo');
