@@ -37,25 +37,32 @@ function ClearLast(){
 }
 
 function ClearComment(){
-  var idC = $(this).attr('commentID');
+  console.log('____________________');
+ console.log($(this).attr("commentid"));
+  var idC = $(this).attr("commentid");
+
   $(this).parent().remove();
-  $.post("../database/action_remove.php",
-    { id : idC, type : 2}
-  );
+
+  console.log('____________________');
+  $.post("../action/removeComment.php",
+    {id : idC}
+  ); 
+  console.log('____________________');  
 }
 
-function ClearReview(){
-  var idC = $(this).attr("reviewID");
+function ClearAnswer(){
+  console.log(this);
+  var idC = $(this).attr("answeid");
   $(this).parent().remove();
-  $.post("../database/action_remove.php",
-    { id : idC, type : 1}
+ $.post("../action/removeAnswer.php",
+    { id : idC}
   );
 }
 
 function PageLoaded(){
   $('a.reply').on("click", ReplyClick);
   $('form.review').submit(VerifyEmpty);
-  $('a.delete-review').on('click',ClearReview);
+  $('a.delete-answer').on('click',ClearAnswer);
   $('a.delete-comment').on('click',ClearComment);
 
 }

@@ -6,7 +6,7 @@
   include_once('../database/restaurant.php');
   include_once('../database/user.php');
 
-  $name='Name1';
+  $name= $_GET['name'];
   $restaurant = getRestaurant($name);
   $restaurantId = $restaurant['id'];
 ?>
@@ -68,7 +68,7 @@ foreach ($comments as $comment) {
     <?php
       if(isset($_SESSION['id']))
         if($_SESSION['id'] == $comment['userId']) { ?>
-          <a class="delete-review" commentId=<?php echo '"'.$commentId.'"' ?> ;> Delete </a>
+          <a class="delete-comment" commentId=<?php echo '"'.$commentId.'"' ?>> Delete </a>
           <?php
         }
       }
@@ -78,8 +78,7 @@ foreach ($comments as $comment) {
       $answers = getAllAnswer($comment['id']);
         foreach($answers as $answer){
             $owner = $answer['userId'];
-            $userAnswer = getUsername($owner);
-            var_dump($userAnswer);?>
+            $userAnswer = getUsername($owner);?>
               <li>
                 <h5>
                   <a href="../pages/profile.php?username=<?php echo $userAnswer['username']?>">
@@ -91,7 +90,7 @@ foreach ($comments as $comment) {
                 </p>
               <?php if(isset($_SESSION['id']))
                       if($_SESSION['id'] == $answer['userId']) { ?>
-                        <a class="delete-comment" commentID=<?php echo ''.$answer['id'].'"' ?> ;> Delete </a><?php }?>
+                        <a class="delete-answer" answerId=<?php echo '"'.$answer['id'].'"' ?>> Delete </a><?php }?>
               </li>
         <?php
         } ?>

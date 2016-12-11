@@ -7,15 +7,15 @@ echo('include answer');
 		return $stmt->fetchAll();
 	}
 
-  function addAnswer( $userId, $commentId, $content){
+  function addAnswer($userId, $commentId, $content){
     global $db;
     $stmt = $db->prepare('INSERT INTO answer Values(Null, ?, ?, ?)');
     $stmt->execute(array($userId, $commentId, $content));
   }
 
-  function deleteAnswer($id){
+  function deleteAnswer($id, $userId){
     global $db;
-    $stmt = $db->prepare('DELETE FROM answer where id = ?');
-    $stmt->execute(array($id));
+    $stmt = $db->prepare('DELETE FROM answer where id = ? AND userId = ?');
+    $stmt->execute(array($id, $userId));
   }
 ?>
