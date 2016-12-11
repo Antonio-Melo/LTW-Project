@@ -5,7 +5,9 @@ CREATE TABLE restaurant (
 	type VARCHAR,
 	description VARCHAR,
 	owner INTEGER REFERENCES user(id),
-	rating FLOAT);
+	rating FLOAT,
+	open Time,
+	close Time);
 
 CREATE TABLE answer(
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -29,7 +31,8 @@ CREATE TABLE user (
   dateBirth DATE,
 	avatar VARCHAR(255));
 
-CREATE TRIGGER updateRatingRestaurant AFTER INSERT ON comment
+CREATE TRIGGER updateRatingRestaurant
+AFTER INSERT ON comment
 BEGIN
 	UPDATE restaurant SET rating = (
 		SELECT AVG(evaluation)
@@ -41,25 +44,37 @@ BEGIN
 	WHERE (restaurant.id = NEW.restaurantId);
 END;
 
-INSERT INTO restaurant VALUES (1,'Name1','typfe1', 'description0', 1, 4.1);
-INSERT INTO restaurant VALUES (2,'Name2','tyfpe1', 'description1', 1, 3.7);
-INSERT INTO restaurant VALUES (3,'Name3','typfe1', 'description1', 2, 2.7);
-INSERT INTO restaurant VALUES (4,'Nameas1','ftype1', 'description0', 2, 4.8);
-INSERT INTO restaurant VALUES (5,'Nameas2','type1', 'description1', 3, 3.7);
-INSERT INTO restaurant VALUES (6,'Namase3','type1', 'description1', 3, 2.7);
-INSERT INTO restaurant VALUES (7,'Namase2','type1', 'description1', 4, 3.7);
-INSERT INTO restaurant VALUES (8,'Nameasa3','type1', 'description1', 4, 2.7);
-INSERT INTO restaurant VALUES (9,'Namasase1','type1', 'description0', 5, 4.8);
-INSERT INTO restaurant VALUES (10,'Nameasas2','type1', 'description1', 6, 3.7);
-INSERT INTO restaurant VALUES (11,'Nameasas3','type1', 'description1', 7, 2.7);
 
+CREATE TRIGGER deleteComments
+BEFORE
+	DELETE ON comment
+	FOR EACH ROW BEGIN DELETE FROM answer
+	WHERE answer.commentId  = OLD.id;
+END;
+
+
+INSERT INTO restaurant VALUES (1,'Name1','typfe1', 'description0', 1, 4.1, '00:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (2,'Name2','tyfpe1', 'description1', 1, 3.7, '00:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (3,'Name3','typfe1', 'description1', 2, 2.7, '00:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (4,'Nameas1','ftype1', 'description0', 2, 4.8, '00:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (5,'Nameas2','type1', 'description1', 3, 3.7, '00:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (6,'Namase3','type1', 'description1', 3, 2.7, '00:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (7,'Namase2','type1', 'description1', 4, 3.7, '00:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (8,'Nameasa3','type1', 'description1', 4, 2.7, '00:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (9,'Namasase1','type1', 'description0', 5, 4.8, '00:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (10,'Nameasas2','type1', 'description1', 6, 3.7, '00:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (11,'Nameasas3','type1', 'description1', 7, 2.7, '00:00:00', '00:00:00');
 
 INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito com a amizade', 5);
 INSERT INTO comment VALUES (2, 1, 2, 'Fiquei satisfeito com a amizade', 3);
 INSERT INTO comment VALUES (3, 1, 1, 'Fiquei satisfeito com a amizade', 4);
 
-INSERT INTO user VALUES (1,'username', 'Nome', 'mail', 'password','1996-11-11',"../database/avatars/default_avatar.png");
-INSERT INTO user VALUES (5,'username2', 'Nome2', 'mail1', 'password','1946-11-11',"../database/avatars/default_avatar.png");
+INSERT INTO user VALUES (1,'username1', 'Nome1', 'mail1', 'password','1996-11-11');
+INSERT INTO user VALUES (2,'username2', 'Nome2', 'mail2', 'password','1946-11-11');
+INSERT INTO user VALUES (3,'username3', 'Nome2', 'mail3', 'password','1946-11-11');
+INSERT INTO user VALUES (4,'username4', 'Nome2', 'mail4', 'password','1946-11-11');
+INSERT INTO user VALUES (5,'username5', 'Nome2', 'mail5', 'password','1946-11-11');
+INSERT INTO user VALUES (6,'username6', 'Nome2', 'mail6', 'password','1946-11-11');
 
 INSERT INTO answer VALUES(1, 1, 1, 'foi pessimo');
 INSERT INTO answer VALUES(2, 2, 1, 'foi pessimo');

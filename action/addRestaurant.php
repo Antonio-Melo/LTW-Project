@@ -4,17 +4,23 @@
      include_once('../database/connection.php');
     include_once('../database/restaurant.php');
     
-     header('Location: ' . $_SERVER['HTTP_REFERER']);
+     
      if(!isset($_SESSION['username'])){
         exit();
     }
+    echo('aqui');
 
       $name = $_POST['name'];
       $description = $_POST['description'];
       $type = $_POST['type'];
       $owner = $_GET['owner'];
+      $open = $_POST['open'];
+      $close = $_POST['close'];
+
+var_dump($_POST);
         
-    addRestaurant($name, $type, $description, $owner);
+    addRestaurant($name, $type, $description, $owner, $open, $close);
+    header('Location: ../home.php');
 ?>
 
 

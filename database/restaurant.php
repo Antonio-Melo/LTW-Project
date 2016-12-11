@@ -14,6 +14,13 @@
     return $stmt->fetch();
   }
 
+   function getRestaurantId($id) {
+    global $db;
+    $stmt = $db->prepare('SELECT * FROM restaurant WHERE id = ?');
+    $stmt->execute(array($id));
+    return $stmt->fetch();
+  }
+
     function getRestaurantOwner($owner) {
     global $db;
     $stmt = $db->prepare('SELECT * FROM restaurant WHERE owner = ?');
@@ -21,11 +28,14 @@
     return $stmt->fetchAll();
   }
 
-  function addRestaurant($name, $type, $description, $owner){
+  function addRestaurant($name, $type, $description, $owner, $open, $close){
       global $db;
-      $stmt =$db->prepare('INSERT INTO restaurant (id, name, type, description, owner)
-                                      VALUES(NULL, ?, ?, ?, ?)');
-      $stmt->execute(array($name, $type, $description, $owner));
+     echo('asasasas');
+      $stmt =$db->prepare('INSERT INTO restaurant (id, name, type, description, owner, rating, open, close)
+                                      VALUES(NULL, ?, ?, ?, ?, 3.0, ?, ?)');
+                                       echo('a11111111');
+      $stmt->execute(array($name, $type, $description, $owner, $open, $close));
+       
   }
 
   function SetRestName($id, $name){

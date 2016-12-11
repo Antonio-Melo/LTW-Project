@@ -16,10 +16,9 @@ echo('include comment');
    
   }
 
-  function deleteComment($id){
+  function deleteComment($id, $userId){
     global $db;
-    $stmt = $db->prepare('DELETE FROM comment where id = ?');
-    $stmt->bind_param(array($id));
-    $stmt->execute();
+    $stmt = $db->prepare('DELETE FROM comment where id = ? And userId = ?');
+    $stmt->execute(array($id, $userId));
   }
 ?>

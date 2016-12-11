@@ -13,6 +13,12 @@
     <label>Description
         <input name="description" type="text" required="required" /></br>
     </label>
+    <label>Open
+        <input name="open" type="time" required="required" /></br>
+    </label>
+    <label>Close
+        <input name="close" type="time" required="required" /></br>
+    </label>
 
     <input type="submit" value="Add"/>
 </form>
