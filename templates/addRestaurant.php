@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
     if(isset($_SESSION['username'])){?>
 
 <form  action="../action/addRestaurant.php?owner=<?php echo($_SESSION['id'])?>" method="post">
@@ -7,10 +7,10 @@ session_start();
     <label>Restaurant name
         <input name="name" type="text" required="required" /></br>
     </label>
-    <label>Type 
+    <label>Type
         <input name="type" type="text" required="required" /></br>
     </label>
-    <label>Description 
+    <label>Description
         <input name="description" type="text" required="required" /></br>
     </label>
 
@@ -18,6 +18,6 @@ session_start();
 </form>
   <?php }  ?>
 
- <form action=header.php method=get >
+ <form action="../pages/home.php" method=get >
     <input type=submit value='Back' />
 </form>

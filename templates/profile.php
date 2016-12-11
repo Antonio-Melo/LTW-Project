@@ -5,7 +5,7 @@
 <section id="namesInfo">
 	<h3 id="name"><?=$userProfile['name']?></h3>
 	<h4 id='username'>@<?=$userProfile['username']?></h4>
-	
+
 </section>
 
 <section id="personalInfo">
@@ -15,26 +15,21 @@
 </section>
 
 <?php
-
 		$Restaurants = getRestaurantOwner($userProfile['id']);
-	?>
-	<section class="restaurants">
+?>
+<section class="restaurants">
 		<h3>Owner: <?=$userProfile['name']?></h3>
 		<?php foreach($Restaurants as $restaurant) { ?>
 				<article class="restaurant">
 					<h3>
-						<?php 
+						<?php
 							$linkAddress = "../pages/restaurant.php?id=" . $restaurant['id'];
 							echo "<a href=\"$linkAddress\">";
-							echo $restaurant['name'] . "</a> "; 
+							echo $restaurant['name'] . "</a> ";
 						?>
 					</h3>
-					<p>
-						<?php echo $restaurant['description'];
-							echo "<br>";
-						?>
-					</p>
-												
+					<p><?php echo $restaurant['description'];
+							echo "<br>";?></p>
 				</article>
-			<?php } ?>
-	</section>
+		<?php } ?>
+</section>

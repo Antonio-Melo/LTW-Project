@@ -18,9 +18,16 @@
         <li><a href="">Take me to a Restaurant</a></li>
         <li> <?php include_once('login_body.php'); ?></li>
         <?php  if(isset($_SESSION['username'])) {?>
-        <li><a href="addRestaurant_body.php">Add Restaurant</a></li>
+        <li><a href="../pages/addRestaurant.php">Add Restaurant</a></li>
         <?php } ?>
-        <li><?php include_once('searchRestaurant.php'); ?></li>
+        <li>
+          <form id="searchForm" action="../pages/searchResults.php" method="post">
+            <label>Search:
+                <input type="text" name="restaurant" required="required">
+             </label>
+            <input type="submit" value="Search">
+          </form>
+        </li>
       </ul>
     </div>
 </div>

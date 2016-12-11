@@ -5,8 +5,8 @@
   include_once('../database/answer.php');
   include_once('../database/restaurant.php');
   include_once('../database/user.php');
- 
-  $name='Name';
+
+  $name='Name1';
   $restaurant = getRestaurant($name);
   $restaurantId = $restaurant['id'];
 ?>
@@ -26,10 +26,10 @@
 
 <form action="../action/addComment.php?userId=<?php echo($_SESSION['id']) ?> &restaurantId=<?php echo($restaurant['id']) ?>" class="comment" method="post">
   <label>Classification: [
-    1:<input type="radio" name="evaluation" value="1"></input> 
-    2:<input type="radio" name="evaluation" value="2"></input> 
-    3:<input type="radio" name="evaluation" value="3" checked></input> 
-    4:<input type="radio" name="evaluation" value="4"></input> 
+    1:<input type="radio" name="evaluation" value="1"></input>
+    2:<input type="radio" name="evaluation" value="2"></input>
+    3:<input type="radio" name="evaluation" value="3" checked></input>
+    4:<input type="radio" name="evaluation" value="4"></input>
     5:<input type="radio" name="evaluation" value="5"></input> ]
   </label>
   <br>
@@ -42,21 +42,21 @@
 
 <?php }
   $comments = getAllComments($restaurantId);
- 
-  
+
+
 ?>
 
 <div class="comments">
-
   <ul>
 <?php
 foreach ($comments as $comment) {
     $userId = $comment['userId'];
-    $commentId = $comment['id']; 
-    $user = getUsername($userId);?>
+    $commentId = $comment['id'];
+    $user = getUsername($userId);
+    ?>
     <li>
       <h4>
-        <a href="../pages/user_profile.php?username=<?php echo $review['username']?>" ?>
+        <a href="../pages/profile.php?username=<?php echo $user['username']?>"?>
         <?php echo $user['username'] ?>
         </a>
       </h4>
@@ -73,15 +73,15 @@ foreach ($comments as $comment) {
         }
       }
     ?>
-  <ul> 
-      <?php 
+  <ul>
+      <?php
       $answers = getAllAnswer($comment['id']);
-        foreach($answers as $answer){   
+        foreach($answers as $answer){
             $owner = $answer['userId'];
             $userAnswer = getUsername($owner);?>
               <li>
                 <h5>
-                  <a href="../pages/user_profile.php?username=<?php echo $answer['username']?>" ?>
+                  <a href="../pages/profile.php?username=<?php echo $userAnswer['username']?>" ?>
                     <?php echo $userAnswer['username'] ?>
                   </a>
                 </h5>
@@ -89,10 +89,10 @@ foreach ($comments as $comment) {
                   <?php echo $answer['content'] ?>
                 </p>
               <?php if(isset($_SESSION['id']))
-                      if($_SESSION['id'] == $answer['user_id']) { ?>
+                      if($_SESSION['id'] == $answer['userId']) { ?>
                         <a class="delete-comment" commentID=<?php echo '"'.$answer['id'].'"' ?> ;> Delete </a><?php }?>
               </li>
-        <?php 
+        <?php
         } ?>
   </ul>
     </li>
@@ -100,5 +100,5 @@ foreach ($comments as $comment) {
 }?>
 </ul>
 </div>
-<?php include_once('../templates/footer.php'); 
+<?php include_once('../templates/footer.php');
 ?>
