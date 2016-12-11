@@ -21,17 +21,18 @@ CREATE TABLE comment (
 	evaluation INTEGER);
 
 CREATE TABLE user (
-	id INTEGER PRIMARY KEY AUTOINCREMENT, 
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
  	username VARCHAR unique,
-  	name VARCHAR,
-  	email VARCHAR Unique,
-  	password VARCHAR,
-  	dateBirth DATE);
+  name VARCHAR,
+  email VARCHAR Unique,
+  password VARCHAR,
+  dateBirth DATE,
+	avatar VARCHAR(255));
 
 CREATE TRIGGER updateRatingRestaurant AFTER INSERT ON comment
 BEGIN
 	UPDATE restaurant SET rating = (
-		SELECT AVG(evaluation) 
+		SELECT AVG(evaluation)
 		FROM restaurant JOIN comment
 		 ON (restaurant.id = NEW.restaurantId)
 		GROUP BY (restaurantId)
@@ -57,8 +58,8 @@ INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito com a amizade', 5);
 INSERT INTO comment VALUES (2, 1, 2, 'Fiquei satisfeito com a amizade', 3);
 INSERT INTO comment VALUES (3, 1, 1, 'Fiquei satisfeito com a amizade', 4);
 
-INSERT INTO user VALUES (1,'username', 'Nome', 'mail', 'password','1996-11-11');
-INSERT INTO user VALUES (5,'username2', 'Nome2', 'mail1', 'password','1946-11-11');
+INSERT INTO user VALUES (1,'username', 'Nome', 'mail', 'password','1996-11-11',"../database/avatars/default_avatar.png");
+INSERT INTO user VALUES (5,'username2', 'Nome2', 'mail1', 'password','1946-11-11',"../database/avatars/default_avatar.png");
 
 INSERT INTO answer VALUES(1, 1, 1, 'foi pessimo');
 INSERT INTO answer VALUES(2, 2, 1, 'foi pessimo');

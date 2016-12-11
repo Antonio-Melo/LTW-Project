@@ -21,17 +21,22 @@ echo('include create.php');
 
     if(!getUser($username)){
         if(! getEmail($email)){
-          $target_dir = "../database/avatars/";
-          //$target_file = $target_dir . basename($_FILES["])
-          addUser($username, $name, $email, $password, $dateBirth);
+          if($avatar["error"] == 0){
+            $target_dir = "../database/avatars/";
+            $target_file = $target_dir . basename($avatar["name"]);
+            move_uploaded_file($avatar["tmp_name"],$target_file);
+          }else{
+            $target_file = "../database/avatars/default_avatar.png";
+          }
+          addUser($username, $name, $email, $password, $dateBirth,$target_file);
         }else{
                 echo('email ja usado');
-                header('Location: ../templates/register.php');}
-    }
-    else{
-        echo('user ja usado');
-        header('Location: ../templates/register.php');
+                header('Location: ../templates/register.php');
         }
+    }else{
+      echo('user ja usado');
+      header('Location: ../templates/register.php');
+    }
 
-        //header('Location: ../home.php');
+    header('Location: ../home.php');
 ?>
