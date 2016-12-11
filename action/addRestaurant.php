@@ -4,7 +4,7 @@
      include_once('../database/connection.php');
     include_once('../database/restaurant.php');
     
-     header('Location: ' . $_SERVER['HTTP_REFERER']);
+     
      if(!isset($_SESSION['username'])){
         exit();
     }
@@ -15,6 +15,7 @@
       $owner = $_GET['owner'];
         
     addRestaurant($name, $type, $description, $owner);
+    header('Location: ../home.php');
 ?>
 
 

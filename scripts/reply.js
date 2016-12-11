@@ -37,21 +37,14 @@ function ClearLast(){
 }
 
 function ClearComment(){
-  console.log('____________________');
- console.log($(this).attr("commentid"));
   var idC = $(this).attr("commentid");
-
   $(this).parent().remove();
-
-  console.log('____________________');
   $.post("../action/removeComment.php",
     {id : idC}
-  ); 
-  console.log('____________________');  
+  );  
 }
 
 function ClearAnswer(){
-  console.log(this);
   var idC = $(this).attr("answeid");
   $(this).parent().remove();
  $.post("../action/removeAnswer.php",

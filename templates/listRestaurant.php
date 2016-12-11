@@ -1,15 +1,3 @@
-<?php
-  session_start();
-  include_once('../database/connection.php');
-  include_once('../database/comment.php');
-  include_once('../database/answer.php');
-  include_once('../database/restaurant.php');
-  include_once('../database/user.php');
-
-  $name= $_GET['name'];
-  $restaurant = getRestaurant($name);
-  $restaurantId = $restaurant['id'];
-?>
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="../scripts/reply.js"></script>
@@ -40,11 +28,7 @@
   <button class="CommentButton"> Post </button>
 </form>
 
-<?php }
-  $comments = getAllComments($restaurantId);
-
-
-?>
+<?php } ?>
 
 <div class="comments">
   <ul>
@@ -99,4 +83,3 @@ foreach ($comments as $comment) {
 <?php }?>
 </ul>
 </div>
-<?php include_once('../templates/footer.php');?>
