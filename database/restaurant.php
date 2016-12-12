@@ -27,6 +27,15 @@
     return $stmt->fetchAll();
   }
 
+  function searchRestaurant($string) {
+    global $db;
+    echo($string);
+    echo('Estou aqui malucos');
+    $stmt = $db->prepare('SELECT * FROM restaurant WHERE name = ?');
+    $stmt->execute(array($string));
+    return $stmt->fetchAll();
+  }
+
   function addRestaurant($name, $type, $description, $owner, $open, $close){
       global $db;
      echo('asasasas');

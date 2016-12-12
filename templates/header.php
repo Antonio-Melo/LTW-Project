@@ -23,7 +23,7 @@
             </ul>
             <?php } ?>
         <li>
-          <form id="searchForm" action="../pages/searchResults.php" method="post">
+          <form id="searchForm" action="../pages/searchResults.php" method="get">
             <label>Search:
                 <input type="text" name="restaurant" required="required">
              </label>
