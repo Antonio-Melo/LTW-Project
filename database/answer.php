@@ -1,5 +1,4 @@
 <?php
-echo('include answer');
 	function getAllAnswer($commentId) {
     global $db;
 		$stmt = $db->prepare('SELECT * FROM answer where commentId = ?');
@@ -15,7 +14,8 @@ echo('include answer');
 
   function deleteAnswer($id, $userId){
     global $db;
-    $stmt = $db->prepare('DELETE FROM answer where id = ? AND userId = ?');
-    $stmt->execute(array($id, $userId));
+    //$stmt = $db->prepare('DELETE FROM answer where id = ? AND userId = ?');
+    $stmt = $db->prepare('DELETE FROM answer where id = ?');
+    $stmt->execute(array($id));
   }
 ?>

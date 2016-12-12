@@ -38,5 +38,5 @@ echo('include create.php');
       header('Location: ../templates/register.php');
     }
 
-    //header('Location: ../home.php');
+    header('Location: ../home.php');
 ?>

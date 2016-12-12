@@ -1,5 +1,4 @@
 <?php
-echo('include comment');
 	function getAllComments($restaurantId) {
     global $db;
 		$stmt = $db->prepare('SELECT * FROM comment where restaurantId= ?');
@@ -18,7 +17,8 @@ echo('include comment');
 
   function deleteComment($id, $userId){
     global $db;
-    $stmt = $db->prepare('DELETE FROM comment where id = ? And userId = ?');
-    $stmt->execute(array($id, $userId));
+    //$stmt = $db->prepare('DELETE FROM comment where id = ? And userId = ?');
+     $stmt = $db->prepare('DELETE FROM comment where id = ?');
+    $stmt->execute(array($id));
   }
 ?>

@@ -6,11 +6,11 @@
   include_once('../database/restaurant.php');
   include_once('../database/user.php');
 
-  $id= $_GET['id'];
+  $restaurantId= $_GET['id'];
 
 	try {
-		$restaurant = getRestaurantId($id);
-		$comments = getAllComments($id);
+		$restaurant = getRestaurantId($restaurantId);
+		$comments = getAllComments($restaurantId);
 	} catch(PDOException $e) {
 		die($e->getMessage());
 	}

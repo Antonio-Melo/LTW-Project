@@ -1,6 +1,5 @@
 <?php session_start();
 ?>
-
     <form action="../action/editeProfile.php" method="post">
     <label>Username: <?php echo($_SESSION['username']); ?><br>
      </label>

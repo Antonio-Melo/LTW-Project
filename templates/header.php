@@ -18,8 +18,10 @@
         <li><a href="">Take me to a Restaurant</a></li>
         <li> <?php include_once('login_body.php'); ?></li>
         <?php  if(isset($_SESSION['username'])) {?>
-        <li><a href="../pages/addRestaurant.php">Add Restaurant</a></li>
-        <?php } ?>
+            <ul>
+              <li><a href="../pages/addRestaurant.php">Add Restaurant</a></li>
+            </ul>
+            <?php } ?>
         <li>
           <form id="searchForm" action="../pages/searchResults.php" method="post">
             <label>Search:

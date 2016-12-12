@@ -45,7 +45,7 @@ function ClearComment(){
 }
 
 function ClearAnswer(){
-  var idC = $(this).attr("answeid");
+  var idC = $(this).attr("answerid");
   $(this).parent().remove();
  $.post("../action/removeAnswer.php",
     { id : idC}

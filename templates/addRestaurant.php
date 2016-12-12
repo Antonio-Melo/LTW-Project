@@ -1,5 +1,4 @@
 <?php
-//session_start();
     if(isset($_SESSION['username'])){?>
 
 <form  action="../action/addRestaurant.php?owner=<?php echo($_SESSION['id'])?>" method="post">
@@ -14,10 +13,10 @@
         <input name="description" type="text" required="required" /></br>
     </label>
     <label>Open
-        <input name="open" type="time" required="required" /></br>
+        <input name="Opening time" type="time" required="required" /></br>
     </label>
     <label>Close
-        <input name="close" type="time" required="required" /></br>
+        <input name="Closing time" type="time" required="required" /></br>
     </label>
 
     <input type="submit" value="Add"/>

@@ -1,5 +1,4 @@
 <?php
-  echo('include restaurant.php');
 	function getAllRestaurants() {
     global $db;
 		$stmt = $db->prepare('SELECT * FROM restaurant');

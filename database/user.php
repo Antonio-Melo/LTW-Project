@@ -1,5 +1,4 @@
 <?php
-	echo('include user.php');
 
 	function addUser($username, $name, $email, $password, $datebirth,$target_file){
 		global $db;

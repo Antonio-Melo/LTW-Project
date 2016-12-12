@@ -4,12 +4,18 @@
 <?php
   echo '<div class="restaurantInfo">';
   echo '<h3>' . $restaurant['name'] . '</h3>';
-  echo '<p>' . $restaurant['description'] .'</p>';
+  echo '<h5>' . $restaurant['description'] .'</h5>';
+  echo '<p>' . 'Open from ' . $restaurant['open'] . '  until ' . $restaurant['close'] . '</p>';
   echo '</div>';
 ?>
 
 <?php
   if(isset($_SESSION['username'])){
+    if($restaurant['owner']== $_SESSION['id'] )
+      $OWNER=1;
+    else
+      $OWNER=0;
+
      $sessionId = $_SESSION['id']; ?>
 
 <form action="../action/addComment.php?userId=<?php echo($_SESSION['id']) ?> &restaurantId=<?php echo($restaurant['id']) ?>" class="comment" method="post">
@@ -47,11 +53,11 @@ foreach ($comments as $comment) {
       <h6> <?php echo $comment['evaluation'] ."/5" ?> </h6>
       <p> <?php echo $comment['content']?> </p>
     <?php
-      if(isset($_SESSION['username'])){?>
+      if(isset($_SESSION['username']) ){?>
           <a class="reply" commentId=<?php echo '"'.$commentId.'"' ?> ;> Answer </a>
     <?php
       if(isset($_SESSION['id']))
-        if($_SESSION['id'] == $comment['userId']) { ?>
+        if($_SESSION['id'] == $comment['userId'] || $OWNER) { ?>
           <a class="delete-comment" commentId=<?php echo '"'.$commentId.'"' ?>> Delete </a>
           <?php
         }
@@ -72,8 +78,8 @@ foreach ($comments as $comment) {
                 <p>
                   <?php echo $answer['content'] ?>
                 </p>
-              <?php if(isset($_SESSION['id']))
-                      if($_SESSION['id'] == $answer['userId']) { ?>
+              <?php if(isset($_SESSION['id']) )
+                      if($_SESSION['id'] == $answer['userId'] || $OWNER) { ?>
                         <a class="delete-answer" answerId=<?php echo '"'.$answer['id'].'"' ?>> Delete </a><?php }?>
               </li>
         <?php
