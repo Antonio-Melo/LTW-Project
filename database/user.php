@@ -80,4 +80,9 @@
 		$stmt = $db->prepare('UPDATE user SET dateBirth = ? WHERE username = ?');
 		$stmt->execute(array($date, $username));
 	}
+	function setUserAvatar($username, $avatar){
+        global $db;
+        $stmt = $db->prepare('UPDATE user SET avatar = ? WHERE username = ?');
+        $stmt->execute(array($avatar, $username));
+	}
 ?>

@@ -1,6 +1,4 @@
-<?php session_start();
-?>
-    <form action="../action/editeProfile.php" method="post">
+ <form action="../action/editeProfile.php" method="post" enctype="multipart/form-data">
     <label>Username: <?php echo($_SESSION['username']); ?><br>
      </label>
     <label>Name:
@@ -17,6 +15,9 @@
       </label>
       <label>Date of Birth:
         <input type="date" name="dateBirth" value="<?=$user['dateBirth']?>" required><br>
+      </label>
+      <label>Avatar:
+          <input type="file" name="avatar" id="fileToUpload"><br>
       </label>
       <input type="submit" value="edite">
     </form>

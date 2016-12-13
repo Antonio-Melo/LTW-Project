@@ -30,7 +30,6 @@
   function searchRestaurant($string) {
     global $db;
     echo($string);
-    echo('Estou aqui malucos');
     $stmt = $db->prepare('SELECT * FROM restaurant WHERE name = ?');
     $stmt->execute(array($string));
     return $stmt->fetchAll();
@@ -38,7 +37,6 @@
 
   function addRestaurant($name, $type, $description, $owner, $open, $close){
       global $db;
-     echo('asasasas');
       $stmt =$db->prepare('INSERT INTO restaurant (id, name, type, description, owner, rating, open, close)
                                       VALUES(NULL, ?, ?, ?, ?, 3.0, ?, ?)');
                                        echo('a11111111');

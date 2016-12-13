@@ -9,7 +9,10 @@
 </head>
 <!--<body background="style/resources/backgroundImg.jpg">-->
 <body>
- <?php session_start(); ?>
+ <?php
+ if(session_id() == '') {
+     session_start();
+ }?>
 
 <div id="header">
     <h1>Food & Good Vibes</h1>
