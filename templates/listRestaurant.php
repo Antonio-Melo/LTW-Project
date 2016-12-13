@@ -1,15 +1,19 @@
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="../scripts/reply.js"></script>
+<div class="listRestaurant">
 <?php
   echo '<div class="restaurantInfo">';
   echo '<h3>' . $restaurant['name'] . '</h3>';
   echo '<h5>' . $restaurant['description'] .'</h5>';
   echo '<p>' . 'Open from ' . $restaurant['open'] . '  until ' . $restaurant['close'] . '</p>';
+  echo '<br>';
   echo '</div>';
 ?>
 
+<div class="comment">
 <?php
+
   if(isset($_SESSION['username'])){
     if($restaurant['owner']== $_SESSION['id'] )
       $OWNER=1;
@@ -27,16 +31,16 @@
     5:<input type="radio" name="evaluation" value="5"></input> ]
   </label>
   <br>
-  <label>
-    Comment:
     <textarea rows="4" cols="60" name="content"></textarea>
-  </label>
   <button class="CommentButton"> Post </button>
 </form>
 
 <?php } ?>
+<br>
+</div>
 
-<div class="comments">
+
+
   <ul>
 <?php
 foreach ($comments as $comment) {
@@ -44,13 +48,24 @@ foreach ($comments as $comment) {
     $commentId = $comment['id'];
     $user = getUsername($userId);
     ?>
+   <div class="comments">
     <li>
-      <h4>
+      
+      
+        <div class="user">
+        <h4>
+        <li>
         <a href="../pages/profile.php?username=<?php echo $user['username']?>"?>
-        <?php echo $user['username'] ?>
-        </a>
+        <?php echo $user['username']; ?></a>
+        
+        <?php $starts=$comment['evaluation'];     
+            for ($i = 1; $i <= $starts; $i++) {?>        
+                <span>☆</span>
+              <?php }?> 
+              </li>
       </h4>
-      <h6> <?php echo $comment['evaluation'] ."/5" ?> </h6>
+
+      </div>
       <p> <?php echo $comment['content']?> </p>
     <?php
       if(isset($_SESSION['username']) ){?>
@@ -67,14 +82,20 @@ foreach ($comments as $comment) {
       <?php
       $answers = getAllAnswer($comment['id']);
         foreach($answers as $answer){
+         
             $owner = $answer['userId'];
             $userAnswer = getUsername($owner);?>
+             <div class="answers">
               <li>
-                <h5>
-                  <a href="../pages/profile.php?username=<?php echo $userAnswer['username']?>">
-                    <?php echo $userAnswer['username'] ?>
-                  </a>
-                </h5>
+                  <div class="userAnswer">
+                    <h4>
+                    <a href="../pages/profile.php?username=<?php echo $userAnswer['username']?>">
+                      <?php echo $userAnswer['username'] ?>
+                    </a>
+                  </h4>
+                  <div>
+                
+                
                 <p>
                   <?php echo $answer['content'] ?>
                 </p>
@@ -82,10 +103,15 @@ foreach ($comments as $comment) {
                       if($_SESSION['id'] == $answer['userId'] || $OWNER) { ?>
                         <a class="delete-answer" answerId=<?php echo '"'.$answer['id'].'"' ?>> Delete </a><?php }?>
               </li>
+              </div>
         <?php
         } ?>
   </ul>
+
     </li>
+    </div>
 <?php }?>
 </ul>
+
 </div>
+

@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $cssPath = '../style/listRestaurant.css';
   include_once('../database/connection.php');
   include_once('../database/comment.php');
   include_once('../database/answer.php');

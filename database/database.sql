@@ -1,7 +1,7 @@
 
 CREATE TABLE restaurant (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	name VARCHAR ,
+	name VARCHAR Unique,
 	type VARCHAR,
 	description VARCHAR,
 	owner INTEGER REFERENCES user(id),
@@ -64,7 +64,6 @@ INSERT INTO restaurant VALUES (8,'Nameasa3','type1', 'description1', 4, 2.7, '00
 INSERT INTO restaurant VALUES (9,'Namasase1','type1', 'description0', 5, 4.8, '00:00:00', '00:00:00');
 INSERT INTO restaurant VALUES (10,'Nameasas2','type1', 'description1', 6, 3.7, '00:00:00', '00:00:00');
 INSERT INTO restaurant VALUES (11,'Nameasas3','type1', 'description1', 7, 2.7, '00:00:00', '00:00:00');
-INSERT INTO restaurant VALUES (12,'Name1','typfe1', 'description1', 1, 5, '00:00:00', '00:00:00');
 
 INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito com a amizade', 5);
 INSERT INTO comment VALUES (2, 1, 2, 'Fiquei satisfeito com a amizade', 3);
