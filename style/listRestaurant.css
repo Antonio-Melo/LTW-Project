@@ -1,0 +1,82 @@
+.comments{
+    margin: 10px;
+    padding: 10px;
+    background-color: #51CFE8;
+    border-radius: 5px;
+}
+
+.listRestaurant li {
+  display: inline;
+  padding: 20px;
+  margin-right: 0;
+}
+
+.listRestaurant a {
+  padding: 5px;
+  text-decoration: none;
+  border: 1px solid #999;
+}
+
+
+.answers{
+  border-radius: 5px;
+  padding: 20px;
+  margin: 25px;
+  margin-top: 15px;
+  background-color: #E1FAFF;
+}
+
+.delete-comment,
+.delete-answer{
+  border-radius:5px;
+   background-color: #ff8000;
+   color:black;
+}
+
+
+.reply{
+background-color: #ff8000;
+}
+
+.userAnswer h4 > a{
+  background-color:blue;
+  padding: 5px;
+  text-decoration: none;
+  border: 1px solid #999;
+  color: white;
+}
+
+.user > h4 > li > a{
+  background-color:blue;
+   padding: 5px;
+  text-decoration: none;
+  border: 1px solid #999;
+  color: white;
+}
+
+.restaurantInfo{
+  background-color:#FFFF99;
+  text-align: center;
+  padding:20px;
+}
+
+.comment{
+  text-align: center;
+  padding:20px;
+}
+
+.listRestaurant a:hover {
+  color: grey;
+  background-color:#FFFF99;
+}
+
+.user > h4 > li > a:hover{
+  background-color:#33FFFF;
+
+}
+
+.userAnswer h4 > a:hover{
+  background-color:#33FFFF;
+}
+
+
