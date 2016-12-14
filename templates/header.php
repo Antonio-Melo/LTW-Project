@@ -15,10 +15,11 @@
  }?>
 
 <div id="header">
-    <h1>Food & Good Vibes</h1>
+    <a href="../pages/home.php">
+        <img src="../style/resources/logo.png">
+    </a>
     <div id="menu">
       <ul>
-        <li><a href="">Take me to a Restaurant</a></li>
         <li> <?php include_once('login_body.php'); ?></li>
         <?php  if(isset($_SESSION['username'])) {?>
             <ul>
