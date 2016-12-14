@@ -6,7 +6,7 @@ echo('include login.php');
     session_start();
     $username = trim(strip_tags($_POST['username']));
     $password = $_POST['password'];
-    var_dump($username);
+    var_dump($_POST);
 
    if (verifyUser($username, $password)) {
         $_SESSION['username'] = $username;
@@ -18,5 +18,7 @@ echo('include login.php');
         echo('erro');
     echo('aqui');
 
-    header('Location: ../home.php');
+
+
+    //header('Location: ../home.php');
 ?>

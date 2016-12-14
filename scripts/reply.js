@@ -39,7 +39,7 @@ function ClearLast(){
 function ClearComment(){
   var idC = $(this).attr("commentid");
   console.log(this);
-  $(this).parent().parent().remove();
+  $(this).parent().parent().parent().remove();
   $.post("../action/removeComment.php",
     {id : idC}
   );  
@@ -47,7 +47,7 @@ function ClearComment(){
 
 function ClearAnswer(){
   var idC = $(this).attr("answerid");
-  $(this).parent().remove();
+  $(this).parent().parent().remove();
  $.post("../action/removeAnswer.php",
     { id : idC}
   );
