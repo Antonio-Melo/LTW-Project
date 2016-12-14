@@ -29,7 +29,6 @@
 
   function searchRestaurant($string) {
     global $db;
-    echo($string);
     $stmt = $db->prepare('SELECT * FROM restaurant WHERE name = ?');
     $stmt->execute(array($string));
     return $stmt->fetchAll();
