@@ -11,8 +11,17 @@
   echo '<p>' . $restaurant['open'] . ' - ' . $restaurant['close'] . '</p>';
   echo '<h4>' .'<hr width=10%>' . '</h4>';
   echo '</div>';
+
+    // address to map
+    $map_address = $restaurant['address'];
+    $url = "http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=".urlencode($map_address);
+    $lat_long = get_object_vars(json_decode(file_get_contents($url)));
+    // pick out what we need (lat,lng)
+    $lat_long = $lat_long['results'][0]->geometry->location->lat . "," . $lat_long['results'][0]->geometry->location->lng;
 ?>
-    <div id="map" style="width:100%;height:500px"></div>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAvQYsBrNenwfJwTtTJiBxdTFa73LEEkNM"></script>
+
+    <div id="map" style="width:100%;height:400px"></div>
 
     <div class="comment">
 <?php
@@ -126,7 +135,21 @@ foreach ($comments as $comment) {
     $address = "Rua das Flores Portugal"?>
 </ul>
 
-<script src="../scripts/map.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvQYsBrNenwfJwTtTJiBxdTFa73LEEkNM&callback=myMap">
-
-
+<script>
+    (function() {
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(<?php echo $lat_long; ?>),
+                mapOptions = {
+                    zoom: 18,
+                    center: myLatlng
+                },
+                map = new google.maps.Map(document.getElementById('map'), mapOptions),
+                marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: '<?php echo $map_address; ?>'
+                });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    })();
+</script>

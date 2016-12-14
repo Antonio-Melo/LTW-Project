@@ -34,11 +34,12 @@
     return $stmt->fetchAll();
   }
 
-  function addRestaurant($name, $type, $description, $owner, $open, $close){
+  function addRestaurant($name, $type, $description,$address, $owner, $open, $close){
       global $db;
-      $stmt =$db->prepare('INSERT INTO restaurant (id, name, type, description, owner, rating, open, close)
-                                      VALUES(NULL, ?, ?, ?, ?, 3.0, ?, ?)');
-      $stmt->execute(array($name, $type, $description, $owner, $open, $close));
+      echo $address;
+      $stmt =$db->prepare('INSERT INTO restaurant (id, name, type, description,address, owner, rating, open, close)
+                                      VALUES(NULL, ?, ?, ?, ?,?, 3.0, ?, ?)');
+      $stmt->execute(array($name, $type, $description,$address, $owner, $open, $close));
        
   }
 
