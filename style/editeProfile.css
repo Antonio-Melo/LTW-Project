@@ -1,3 +1,42 @@
+#namesInfo{
+  border-style: solid;
+  text-align: center;
+  width: 400px;
+  height: 450px;
+  position: relative;
+    left: 30%;
+}
+
+.restaurants{
+  background: mediumspringgreen;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.restaurant{
+  border-style: solid;
+  margin: 20px;
+  padding: 20px;
+  width: 600px;
+    position: relative;
+    left: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 @import url("../css/common.css");
 
 
@@ -96,3 +135,4 @@ textarea {
 	margin-top: 3em;
 	cursor: pointer;
 }
+*/

@@ -13,10 +13,10 @@
         <input name="description" type="text" required="required" /></br>
     </label>
     <label>Open
-        <input name="Opening time" type="time" required="required" /></br>
+        <input name="Opening_time" type="time" required="required" /></br>
     </label>
     <label>Close
-        <input name="Closing time" type="time" required="required" /></br>
+        <input name="Closing_time" type="time" required="required" /></br>
     </label>
 
     <input type="submit" value="Add"/>

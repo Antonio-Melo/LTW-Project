@@ -6,13 +6,12 @@
 	<h3 id="name"><?=$userProfile['name']?></h3>
 	<h4 id='username'>@<?=$userProfile['username']?></h4>
 
-</section>
-
 <section id="personalInfo">
 	<h4> Personal Information </h4>
     <img src=<?=$userProfile['avatar']?> >
 	<p id="email">Email: <?=$userProfile['email']?></p>
 	<p id="birthday">Date of Birth: <?=$userProfile['dateBirth']?></p>
+</section>
 </section>
 
 <?php

@@ -8,9 +8,7 @@ echo('include login.php');
     $password = $_POST['password'];
     var_dump($username);
 
- echo('aqui');
    if (verifyUser($username, $password)) {
- echo('aqui');
         $_SESSION['username'] = $username;
         $info =  getUser($username);
         $_SESSION['id'] = $info['id'];
@@ -18,7 +16,7 @@ echo('include login.php');
     }
     else
         echo('erro');
-         echo('aqui');
+    echo('aqui');
 
     header('Location: ../home.php');
 ?>

@@ -8,14 +8,13 @@
      if(!isset($_SESSION['username'])){
         exit();
     }
-    echo('aqui');
 
       $name = $_POST['name'];
       $description = $_POST['description'];
       $type = $_POST['type'];
       $owner = $_GET['owner'];
-      $open = $_POST['open'];
-      $close = $_POST['close'];
+      $open = $_POST['Opening_time'];
+      $close = $_POST['Closing_time'];
 
 var_dump($_POST);
         

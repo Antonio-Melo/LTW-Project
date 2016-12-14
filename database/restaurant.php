@@ -39,7 +39,6 @@
       global $db;
       $stmt =$db->prepare('INSERT INTO restaurant (id, name, type, description, owner, rating, open, close)
                                       VALUES(NULL, ?, ?, ?, ?, 3.0, ?, ?)');
-                                       echo('a11111111');
       $stmt->execute(array($name, $type, $description, $owner, $open, $close));
        
   }

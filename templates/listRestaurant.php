@@ -4,10 +4,12 @@
 <div class="listRestaurant">
 <?php
   echo '<div class="restaurantInfo">';
-  echo '<h3>' . $restaurant['name'] . '</h3>';
+  echo '<h2>' . $restaurant['name'] . '</h2>';
+  echo '<h3>' .'Description' . '</h3>';
   echo '<h5>' . $restaurant['description'] .'</h5>';
-  echo '<p>' . 'Open from ' . $restaurant['open'] . '  until ' . $restaurant['close'] . '</p>';
-  echo '<br>';
+  echo '<h4>' .'<hr width=10%>' . 'Hours' .'</h4>';
+  echo '<p>' . $restaurant['open'] . ' - ' . $restaurant['close'] . '</p>';
+  echo '<h4>' .'<hr width=10%>' . '</h4>';
   echo '</div>';
 ?>
 
@@ -23,23 +25,33 @@
      $sessionId = $_SESSION['id']; ?>
 
 <form action="../action/addComment.php?userId=<?php echo($_SESSION['id']) ?> &restaurantId=<?php echo($restaurant['id']) ?>" class="comment" method="post">
-  <label>Classification: [
-    1:<input type="radio" name="evaluation" value="1"></input>
-    2:<input type="radio" name="evaluation" value="2"></input>
-    3:<input type="radio" name="evaluation" value="3" checked></input>
-    4:<input type="radio" name="evaluation" value="4"></input>
-    5:<input type="radio" name="evaluation" value="5"></input> ]
-  </label>
+  <label class="Classification">Classification:
+    <span class="rating">  
+        <input type="radio" class="rating-input" id="rating-input-1-5" name="evaluation" value="5"/>
+        <label for="rating-input-1-5" class="rating-star"></label>
+
+        <input type="radio" class="rating-input" id="rating-input-1-4" name="evaluation" value="4"/>
+        <label for="rating-input-1-4" class="rating-star"></label>
+
+        <input type="radio" class="rating-input" id="rating-input-1-3" name="evaluation" value="3"/>
+        <label for="rating-input-1-3" class="rating-star"></label>
+
+        <input type="radio" class="rating-input" id="rating-input-1-2" name="evaluation" value="2"/>
+        <label for="rating-input-1-2" class="rating-star"></label>
+        
+        <input type="radio" class="rating-input" id="rating-input-1-1" name="evaluation" value="1"/>
+        <label for="rating-input-1-1" class="rating-star"></label>
+
+  </span>
+    </label>
   <br>
-    <textarea rows="4" cols="60" name="content"></textarea>
+    <textarea class="CommentRestaurant" rows="4" cols="60" name="content"></textarea>
   <button class="CommentButton"> Post </button>
 </form>
 
 <?php } ?>
 <br>
 </div>
-
-
 
   <ul>
 <?php
@@ -50,8 +62,6 @@ foreach ($comments as $comment) {
     ?>
    <div class="comments">
     <li>
-      
-      
         <div class="user">
         <h4>
         <li>
@@ -112,6 +122,4 @@ foreach ($comments as $comment) {
     </div>
 <?php }?>
 </ul>
-
-</div>
 

@@ -38,7 +38,8 @@ function ClearLast(){
 
 function ClearComment(){
   var idC = $(this).attr("commentid");
-  $(this).parent().remove();
+  console.log(this);
+  $(this).parent().parent().remove();
   $.post("../action/removeComment.php",
     {id : idC}
   );  

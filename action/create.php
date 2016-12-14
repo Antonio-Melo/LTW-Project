@@ -18,7 +18,7 @@ echo('include create.php');
 
     var_dump($password);
     var_dump($confirm);
-
+    
     if(!getUser($username)){
         if(! getEmail($email)){
           if($avatar["error"] == 0){

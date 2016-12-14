@@ -9,6 +9,7 @@
         exit();
     }
 
+var_dump($_POST);
       $restaurantId = $_GET['restaurantId'];
       $userId = $_GET['userId'];
       $content = htmlentities($_POST['content'], ENT_QUOTES, "UTF-8");
