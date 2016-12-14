@@ -62,8 +62,6 @@
 <?php } ?>
 <br>
 </div>
-
-  <ul>
 <?php
 foreach ($comments as $comment) {
     $userId = $comment['userId'];
@@ -98,7 +96,7 @@ foreach ($comments as $comment) {
         }
       }
     ?>
-  </ul>
+
   <ul>
       <?php
       $answers = getAllAnswer($comment['id']);
@@ -114,7 +112,7 @@ foreach ($comments as $comment) {
                       <?php echo $userAnswer['username'] ?>
                     </a>
                   </h4>
-                  <div>
+                  </div>
                 
                 
                 <p>

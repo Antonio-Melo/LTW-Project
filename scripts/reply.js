@@ -16,7 +16,7 @@ function ReplyClick(){
   ClearLast();
   var commentId = $(this).attr('commentId');
   var form = $('<form action="../action/addAnswer.php" method="post" > </form>');
-  var textS = $('<textarea placeholder="Write here..." name="content"  rows="4" cols="50"></textarea>');
+  var textS = $('<textarea class="textanswer" placeholder="Write here..." name="content"  rows="4" cols="50"></textarea>');
   var textH = $('<input type="hidden" name="commentId" value="'+commentId+'"> </input>');
 
   var btn = $('<button> Send </button>');
@@ -39,13 +39,14 @@ function ClearLast(){
 function ClearComment(){
   var idC = $(this).attr("commentid");
   console.log(this);
-  $(this).parent().parent().parent().remove();
+  $(this).parent().parent().remove();
   $.post("../action/removeComment.php",
     {id : idC}
   );  
 }
 
 function ClearAnswer(){
+  console.log(this);
   var idC = $(this).attr("answerid");
   $(this).parent().parent().remove();
  $.post("../action/removeAnswer.php",

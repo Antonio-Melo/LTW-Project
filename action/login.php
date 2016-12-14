@@ -20,5 +20,5 @@ echo('include login.php');
 
 
 
-    //header('Location: ../home.php');
+    header('Location: ../home.php');
 ?>
