@@ -12,8 +12,9 @@
   echo '<h4>' .'<hr width=10%>' . '</h4>';
   echo '</div>';
 ?>
+    <div id="map" style="width:100%;height:500px"></div>
 
-<div class="comment">
+    <div class="comment">
 <?php
 
   if(isset($_SESSION['username'])){
@@ -88,6 +89,7 @@ foreach ($comments as $comment) {
         }
       }
     ?>
+  </ul>
   <ul>
       <?php
       $answers = getAllAnswer($comment['id']);
@@ -120,6 +122,11 @@ foreach ($comments as $comment) {
 
     </li>
     </div>
-<?php }?>
+<?php }
+    $address = "Rua das Flores Portugal"?>
 </ul>
+
+<script src="../scripts/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvQYsBrNenwfJwTtTJiBxdTFa73LEEkNM&callback=myMap">
+
 
