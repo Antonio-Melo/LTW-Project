@@ -12,6 +12,9 @@
     <label>Description
         <input name="description" type="text" required="required" /></br>
     </label>
+    <label>Address
+        <input name="address" type="text" required="required" /></br>
+    </label>
     <label>Open
         <input name="Opening_time" type="time" required="required" /></br>
     </label>
