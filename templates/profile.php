@@ -29,7 +29,7 @@
 							echo $restaurant['name'] . "</a> ";
 						?>
 					</h3>
-					<p><?php echo $restaurant['description']; ?></p>
+					<p id="p2"><?php echo $restaurant['description']; ?></p>
 				</article>
 		<?php } ?>
 </section>
