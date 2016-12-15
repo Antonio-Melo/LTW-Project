@@ -1,9 +1,10 @@
 <?php
     if(isset($_SESSION['username'])){?>
 
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 <div class="addResaurant">
 <form  class ="addForm" action="../action/addRestaurant.php?owner=<?php echo($_SESSION['id'])?>" method="post">
-    <h1> Add </h1>
+    <h1> Add Restaurant </h1>
     <label>Restaurant name
         <input name="name" type="text" required="required" /></br>
     </label>
