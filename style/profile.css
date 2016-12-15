@@ -6,25 +6,26 @@
 
 }
 #btnEdit{
-    color:black;
+    color: white;
     font-size: 1.1em;
-      border-radius: 10px 5px;
+      border-radius: 30px;
       padding: 7px;
       position: relative;
-       top: 200px;
-      left: 75%;
-      background-color: #FFCC99;
-     
+       top: 330px;
+      left: 70%;
+      background-color: #334d4d;
+
 }
 #btnEdit:hover{
-    color:brown;
+    color:gray;
     font-weight: bold;
 
 }
 
 #namesInfo h3 > p{
-    font-family: "Courier New", Courier, monospace;
-    font-size: 1.3em;
+  font-style: italic;
+  font-family: "Times New Roman", Times, sans-serif;
+    font-size: 30px;
     padding: 0px;
     margin: 0px;
 }
@@ -45,12 +46,13 @@
 }
 
 #namesInfo{
-  background-image: url('http://img06.deviantart.net/bc50/i/2010/021/b/8/new_sj_profile_background_by_ultema.png');
   background-color: white;
   background-size: 100% 120%;
   background-position: 30% 20%;
   background-repeat: no-repeat;
-  border-style: solid;
+  border-style: dashed;
+  border-radius: 10px;
+  border-color: #334d4d;
   text-align: center;
   width: 500px;
   height: 30%;
@@ -59,38 +61,44 @@
 }
 
 .restaurants{
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ-rF4xhnyIMX7-p7bVFE3BPjaslEcWmI4XeevvH1kZMJag0nU');
+  /*background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ-rF4xhnyIMX7-p7bVFE3BPjaslEcWmI4XeevvH1kZMJag0nU');*/
   background-size:  100% 100%;
   background-repeat: no-repeat;
+border-top-color: #2d5986;
+border-top-style: solid;
+border-bottom-color: #2d5986;
+border-bottom-style: solid;
   text-align: center;
   margin: 20px;
+margin-top: 50px;
   padding: 20px;
 }
 
 .restaurant{
-  background-image: url('https://static.vecteezy.com/system/resources/previews/000/095/254/original/restaurant-menu-vector.jpg');
+  /*background-image: url('https://static.vecteezy.com/system/resources/previews/000/095/254/original/restaurant-menu-vector.jpg');
   background-size: 100% 100%;
    background-color: mediumspringgreen;
-  border-top-style: solid;
-  margin: 5px;
-  padding: 20px;
+  border-top-style: solid;*/
   width: 600px;
-  position: relative;
+    margin: 5px;
+    padding: 20px;
+margin-left: 40px;
+    position: relative;
     left: 20%;
 }
 
 .restaurant h3{
   width: 130px;
     position: relative;
-  left: 40%;
+margin-left: 230px;
    font-size: 1.5em;
-  
+
 }
 
 .restaurant h2{
   border-style: double;
   text-align: center;
-  color:#ffff99;
+  color: #2d5986;
   padding: 10px;
   width: 170px;
   position: relative;
@@ -99,30 +107,32 @@
   border-collapse: collapse;
   outline-offset: 5px;
   outline: 2px solid black;
-  border: 2px solid #ff8000;
-  
+  border: 2px solid #2d5986;
+  font-style: italic;
+  font-family: sans-serif;
 }
 
 .restaurant p{
   font-size: 1.3em;
-   color: #FFFF99;
+   color: black;
 }
 .restaurant > h2  p{
     font-family: "Times New Roman", Times, serif;
     margin:5px;
-    color: white;
+    color: #2d5986;
 
 }
 
 .restaurant a{
    text-decoration: none;
-  color: #ff8000;
-  
+  color: #2d5986;
+
 
 }
 .restaurant a:hover{
-  color: #FFB266;
+  color: #538cc6;
 }
 
-
-
+.restaurant #p2{
+  margin-left: 20px;
+}
