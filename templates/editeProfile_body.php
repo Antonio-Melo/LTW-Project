@@ -17,7 +17,7 @@
       </label>
 
       <label>Confirm password:
-        <input type="password" size="27" name="confirm" ><br>
+        <input type="password" size="27" name="confirm" required="required"><br>
       </label>
 
       <label>Date of Birth:
