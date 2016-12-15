@@ -3,9 +3,9 @@
 <head>
   <title>Food & Good Vibes</title>
    <link rel="stylesheet" href="<?=$cssPath?>">
-  <!-- <link rel="stylesheet" href="../style/design.css">
-  <script type="text/javascript" src="scripts/slideshowHomepage.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">-->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="../scripts/script.js"></script>
+ <!--  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">-->
 </head>
 <!--<body background="style/resources/backgroundImg.jpg">-->
 <body>
