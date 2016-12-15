@@ -54,28 +54,23 @@ BEFORE
 END;
 
 
-INSERT INTO restaurant VALUES (1,'Name1','typfe1', 'description0','Rua das Flores', 1, 4.1, '00:00:00', '00:00:00');
-INSERT INTO restaurant VALUES (2,'Name2','tyfpe1', 'description1','Rua das Flores', 1, 3.7, '00:00:00', '00:00:00');
-INSERT INTO restaurant VALUES (3,'Name3','typfe1', 'description1','Rua das Flores', 2, 2.7, '00:00:00', '00:00:00');
-INSERT INTO restaurant VALUES (4,'Nameas1','ftype1', 'description0','Rua das Flores', 2, 4.8, '00:00:00', '00:00:00');
-INSERT INTO restaurant VALUES (5,'Nameas2','type1', 'description1','Rua das Flores', 3, 3.7, '00:00:00', '00:00:00');
-INSERT INTO restaurant VALUES (6,'Namase3','type1', 'description1','Rua das Flores', 3, 2.7, '00:00:00', '00:00:00');
-INSERT INTO restaurant VALUES (7,'Namase2','type1', 'description1','Rua das Flores', 4, 3.7, '00:00:00', '00:00:00');
-INSERT INTO restaurant VALUES (8,'Nameasa3','type1', 'description1','Rua das Flores', 4, 2.7, '00:00:00', '00:00:00');
-INSERT INTO restaurant VALUES (9,'Namasase1','type1', 'description0','Rua das Flores', 5, 4.8, '00:00:00', '00:00:00');
-INSERT INTO restaurant VALUES (10,'Nameasas2','type1', 'description1','Rua das Flores', 6, 3.7, '00:00:00', '00:00:00');
-INSERT INTO restaurant VALUES (11,'Nameasas3','type1', 'description1','Rua das Flores', 7, 2.7, '00:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (1,'Tapas','francesinha', 'Serve principalmente francesinhas e bagaço','Estrada Exterior da Circunvalação 7674', 1, 4.1, '19:00:00', '22:30:00');
+INSERT INTO restaurant VALUES (2,'MacDonalds Aliados','Fast food', 'Hambugers','Praça da Liberdade 126', 1, 3.7, '08:00:00', '01:00:00');
+INSERT INTO restaurant VALUES (3,'Bo 457','Steak house', 'Pratos com carne','Rua de Dr. Eduardo Torres 457', 1, 2.7, '19:30:00', '22:30:00');
+INSERT INTO restaurant VALUES (4,'Terrasse','Gourmet', 'Todo o tipo de pratos','R. Dr. Sousa Rosa 23', 1, 4.8, '10:00:00', '23:00:00');
+INSERT INTO restaurant VALUES (5,'BBgourmet','Gourmet', 'Todo o tipo de pratos','R. de António Cardoso 301', 1, 3.7, '08:00:00', '23:30:00');
+INSERT INTO restaurant VALUES (6,'Pizzaria São Martinho','Pizzaria', 'Conhecido pelas pizzas e massas','Av. Gen. Norton de Matos 35', 1, 2.7, '12:00:00', '00:00:00');
+INSERT INTO restaurant VALUES (7,'Cufra','restaurante', 'Francesinhas','· Av. da Boavista 2504', 1, 3.7, '20:00:00', '23:00:00');
+INSERT INTO restaurant VALUES (8,'Sushi Douro','Comida japonesa', 'Sushi',' R. Fonte da Luz 217', 1, 2.7, '20:00:00', '23:00:00');
+INSERT INTO restaurant VALUES (10,'La Cantinita','Mexicano', 'Comida mexicana','R. de Santa Teresa 28', 1, 3.7, '11:00:00', '02:00:00');
 
-INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito com a amizade', 5);
-INSERT INTO comment VALUES (2, 1, 2, 'Fiquei satisfeito com a amizade', 3);
-INSERT INTO comment VALUES (3, 1, 1, 'Fiquei satisfeito com a amizade', 4);
+INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito', 5);
+INSERT INTO comment VALUES (2, 1, 2, 'Razoavel', 3);
+INSERT INTO comment VALUES (3, 1, 1, 'Adorei', 4);
 
-INSERT INTO user VALUES (1,'username1', 'Nome1', 'mail1', 'password','1996-11-11','../database/avatars/default_avatar.png');
-INSERT INTO user VALUES (2,'username2', 'Nome2', 'mail2', 'password','1946-11-11','../database/avatars/default_avatar.png');
-INSERT INTO user VALUES (3,'username3', 'Nome2', 'mail3', 'password','1946-11-11','../database/avatars/default_avatar.png');
-INSERT INTO user VALUES (4,'username4', 'Nome2', 'mail4', 'password','1946-11-11','../database/avatars/default_avatar.png');
-INSERT INTO user VALUES (5,'username5', 'Nome2', 'mail5', 'password','1946-11-11','../database/avatars/default_avatar.png');
-INSERT INTO user VALUES (6,'username6', 'Nome2', 'mail6', 'password','1946-11-11','../database/avatars/default_avatar.png');
+INSERT INTO user VALUES (1,'Antonio', 'António Melo', 'antonio@gmail.com', '12345','1996-11-11','../database/avatars/default_avatar.png');
+INSERT INTO user VALUES (2,'Lazaro', 'Lazaro', 'lazaro@gmail.com', '12345','1946-11-11','../database/avatars/default_avatar.png');
+INSERT INTO user VALUES (3,'Margarida', 'Margarida', 'margarida@gmail.com', '12345','1946-11-11','../database/avatars/default_avatar.png');
 
 INSERT INTO answer VALUES(1, 1, 1, 'foi pessimo');
 INSERT INTO answer VALUES(2, 2, 1, 'foi pessimo');
