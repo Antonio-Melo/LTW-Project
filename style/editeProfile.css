@@ -8,18 +8,16 @@
     border-style: inset;
     
 }
+
 .editeprofile:after {
-    content : "";
     display: block;
     position: absolute;
     top: 250px;
     left: 0;
-    background-image: url('https://cdn3.iconfinder.com/data/icons/flatastic-4-1/256/male_user_edit-512.png'); 
+    background-image: url('https://cdn3.iconfinder.com/data/icons/flatastic-4-1/256/male_user_edit-512.png');
     width: 100%;
     height: 100%;
-    opacity : 0.1;
-    z-index: -0.2;
-    background-repeat: repeat-x;
+    opacity: 0.1;
 }
 
 .editeprofile label{
@@ -42,7 +40,5 @@
 }
 .link:hover{
   color:blue;
-
-
 }
 
