@@ -1,0 +1,47 @@
+.addResaurant{
+     margin-top:20px;
+    height: 400px;
+    background-image: url('http://cardronahotel.co.nz/wp-content/themes/cardrona/images/restaurant-page-header-background.jpg');
+    background-repeat: no-repeat;
+}
+
+.addForm{ 
+    margin-left: 40%;
+     margin-top:20px;
+}
+
+.addForm h1{ 
+     padding: 20px;
+}
+
+.addResaurant label{
+ display: block;
+    width: 400px;
+    cursor: pointer;
+    padding-right: 6px;
+    padding-bottom: 10px;
+    font-size: 1.1em;
+    font-family: Helvetica, Arial, Sans-Serif;
+    color:blue;
+}
+
+.addResaurant input{
+    border-radius: 5px 5px;
+}
+
+
+.addResaurant input:hover{
+    padding: 2px;
+}
+
+.addBotton{
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 1.1em;
+    background-color: gray;
+    color:white;
+}
+
+.addBotton:hover{
+    padding: 3px;
+    color:brown;
+}
