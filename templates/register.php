@@ -1,3 +1,4 @@
+<div class="wrapper">
     <form action="../action/create.php" method="post" enctype="multipart/form-data" id="create_account">
         <input type="text" name="username" required="required"  placeholder= "Username"><br>
 
@@ -15,3 +16,4 @@
 
       <input class="submit" type="submit" value="Register">
     </form>
+<div/>

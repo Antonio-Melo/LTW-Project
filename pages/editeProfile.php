@@ -1,8 +1,9 @@
 <?php
-	$cssPath = '../style/editeProfile.css';
 	include_once('../database/connection.php');
 	include_once('../database/user.php');
 	include_once('../database/restaurant.php');
+
+    $cssPath = '../style/editeProfile.css';
 	include_once('../templates/header.php');
 
 

@@ -1,3 +1,4 @@
+<div class="wrapper">
  <div class="editeprofile">
    <form action="../action/editeProfile.php" method="post" enctype="multipart/form-data">
     <div class="link">
@@ -29,4 +30,5 @@
       </label>
       <input type="submit" value="edite">
     </form>
-  </div>
+ </div>
+</div>
