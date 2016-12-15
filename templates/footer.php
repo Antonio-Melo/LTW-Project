@@ -1,5 +1,5 @@
         <div id="footer">
-			       <p>Food & Good Vibes @ FEUP - 2016</p>
+			       <p>FoodBack @ FEUP - 2016</p>
              <p class="marquee"><span id="dtText"></span></p>
                <script>
                 var today = new Date();

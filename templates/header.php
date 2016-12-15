@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Food & Good Vibes</title>
+  <title>FoodBack</title>
    <link rel="stylesheet" href="<?=$cssPath?>">
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="../scripts/script.js"></script>
@@ -16,7 +16,7 @@
 
 <div id="header">
     <a href="../pages/home.php">
-        <img src="../style/resources/logo.png">
+        <img src="../style/resources/logo">
     </a>
     <div id="menu">
       <ul>
