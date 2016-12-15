@@ -1,0 +1,6 @@
+@import url("../style/common.css");
+
+html, body {
+    background: linear-gradient(transparent, transparent, white), url("../style/resources/homepage.jpg") no-repeat center;
+    background-size:cover;
+}
