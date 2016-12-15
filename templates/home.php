@@ -1,4 +1,6 @@
-<!--<div class="slideshow-container">
+<div class="wrapper">
+
+<div class="slideshow-container">
  <div class="mySlides fade">
    <div class="numbertext">1 / 4</div>
    <img src="../style/resources/img1.jpg" style="width:50%">
@@ -33,4 +35,6 @@
  <span class="dot" onclick="currentSlide(2)"></span>
  <span class="dot" onclick="currentSlide(3)"></span>
  <span class="dot" onclick="currentSlide(4)"></span>
-</div>-->
+ </div>
+    <div class="push"></div>
+</div>
