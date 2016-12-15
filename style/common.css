@@ -23,19 +23,36 @@ html, body {
 }
 
 #menu ul{
-    list-style-type: none;
     overflow: hidden;
     margin-top:35px;
     padding: 0;
 }
 
 #menu ul li{
+    text-decoration: none;
     width: 100%;
     float: right;
     display:inline-block;
 
 }
+#loggedas{
+    position: absolute;
+    right: 0%;
+    padding-left: 30px;
+}
+a{
+    text-decoration: none;
+}
 
+
+#logout{
+    margin-right: 200px;
+}
+#addR{
+    position: absolute;
+    right: 0%;
+    margin-right: 50px;
+}
 #searchForm {
     position: absolute;
     right: 45%;

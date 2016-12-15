@@ -1,9 +1,10 @@
 <?php if(isset($_SESSION['username'])) { ?>
 
-<label> Logged in as:
+<label id="loggedas"> Logged in as:
     <a href="../pages/profile.php?username=<?php echo($_SESSION['username']) ?>"> <?php echo($_SESSION['username']) ?></a>
+    <a id="logout" href="../action/logout.php">Logout</a>
 </label>
-<a href="../action/logout.php">Logout</a>
+
 <?php }else{ ?>
 
 <form id="loginForm" action="../action/login.php" method="post">

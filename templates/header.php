@@ -22,7 +22,7 @@
       <ul>
         <li> <?php include_once('login_body.php'); ?></li>
         <?php  if(isset($_SESSION['username'])) {?>
-              <a href="../pages/addRestaurant.php">Add Restaurant</a>
+              <a id="addR" href="../pages/addRestaurant.php">Add Restaurant</a>
          <?php } ?>
         <li>
           <form id="searchForm" action="../pages/searchResults.php" method="post">
