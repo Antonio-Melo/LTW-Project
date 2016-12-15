@@ -1,13 +1,10 @@
-.listRestaurant{
-  background-image: url('http://www.theredherring.co.za/wp-content/uploads/2013/03/background-1024x808.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
+@import url("../style/common.css");
+
 
 .comments{
     margin: 10px;
     padding: 10px;
-    background-color: #51CFE8;
+    background-color: grey;
     border-radius: 5px;
 }
 
@@ -32,7 +29,7 @@
   padding: 20px;
   margin: 25px;
   margin-top: 15px;
-  background-color: #E1FAFF;
+  background-color: ghostwhite;
 }
 
 .delete-comment,
@@ -47,7 +44,7 @@ background-color: #ff8000;
 }
 
 .userAnswer h4 > a{
-  background-color:blue;
+  background-color:dodgerblue;
   padding: 5px;
   text-decoration: none;
   border: 1px solid #999;
@@ -108,12 +105,12 @@ background-color: #ff8000;
   color: yellow;
 }
 
-.restaurantInfo{
-  background-image: url('http://www.delgadoscarp.com/img/hero/home.jpg');
-  background-size: 55% 100%;
-  background-position: center; 
+/*.restaurantInfo{
+  background-image: url('../style/resources/restaurant.jpg');
+  background-size: 60% 100%;
+  background-position: center;
   background-repeat: no-repeat;
-}
+}*/
 
 .restaurantInfo h2{
   font-family: serif;
@@ -153,7 +150,7 @@ background-color: #ff8000;
 
 .CommentRestaurant{
   border:1px solid #d1c7ac;
-  background-color: #E0E0E0;
+  background-color: grey;
   background:#A0A0A0;
 	padding:3px;
 	margin-right:4px;

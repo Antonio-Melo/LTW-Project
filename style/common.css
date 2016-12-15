@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     background: linear-gradient(transparent, transparent, white), url("../style/resources/homepage.jpg") no-repeat center;
-    background-size:cover
+    background-size:cover;
 }
 
 /***** Header *****/
