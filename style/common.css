@@ -10,8 +10,8 @@ html, body {
     height: 90px;
     top: 0;
     z-index: 9999;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #efefef;
 }
 #header a img{
     position: absolute;
@@ -56,3 +56,14 @@ html, body {
     display: none;
 }
 
+
+/***** Footer *****/
+#footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
