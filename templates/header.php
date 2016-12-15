@@ -22,15 +22,13 @@
       <ul>
         <li> <?php include_once('login_body.php'); ?></li>
         <?php  if(isset($_SESSION['username'])) {?>
-            <ul>
-              <li><a href="../pages/addRestaurant.php">Add Restaurant</a></li>
-            </ul>
-            <?php } ?>
+              <a href="../pages/addRestaurant.php">Add Restaurant</a>
+         <?php } ?>
         <li>
           <form id="searchForm" action="../pages/searchResults.php" method="post">
             <label>Search:
                 <input type="text" name="restaurant" required="required">
-             </label>
+            </label>
             <input type="submit" value="Search">
           </form>
         </li>
