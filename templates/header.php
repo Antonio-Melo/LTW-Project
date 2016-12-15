@@ -26,10 +26,10 @@
          <?php } ?>
         <li>
           <form id="searchForm" action="../pages/searchResults.php" method="post">
-            <label>Search:
-                <input type="text" name="restaurant" required="required">
-            </label>
-            <input type="submit" value="Search">
+
+                <input type="text" size="50" name="restaurant" required="required" placeholder="Search Restaurant">
+
+            <input type="submit" id="butSearch" value="Search">
           </form>
         </li>
       </ul>

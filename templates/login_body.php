@@ -8,12 +8,12 @@
 
 <form id="loginForm" action="../action/login.php" method="post">
   <label>Username:
-       <input type="text" name="username" required="required">
+       <input type="text"  size="10" name="username" required="required">
   </label>
   <label>Password:
-       <input type="password" name="password" required="required">
+       <input type="password" size="10" name="password" required="required">
   </label>
-  <input type="submit" value="Login">
+  <input class="register" type="submit" value="Login">
   <a href="../pages/register.php">Register </a>
 </form>
 <?php } ?>
