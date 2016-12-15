@@ -7,7 +7,7 @@
     $restaurants = searchRestaurant($_POST['restaurant']);
     //var_dump($restaurants);
 ?>
-
+<div class="wrapper">
 <div class="searchResults">
     <ul>
         <?php
@@ -22,4 +22,5 @@
         <?php }}else echo "No results found";?>
 
     </ul>
+</div>
 </div>

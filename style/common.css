@@ -2,6 +2,8 @@ html, body {
 	margin: 0px;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(transparent, transparent, white), url("../style/resources/homepage.jpg") no-repeat center;
+    background-size:cover
 }
 
 /***** Header *****/
@@ -41,6 +43,7 @@ html, body {
     right: 0%;
     padding-left: 30px;
 }
+
 a{
     text-decoration: none;
 }
