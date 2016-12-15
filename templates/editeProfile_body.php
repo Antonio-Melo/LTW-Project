@@ -28,7 +28,7 @@
       <label>Avatar:
           <input type="file" name="avatar" id="fileToUpload"><br>
       </label>
-      <input type="submit" value="edite">
+      <input type="submit"  style="background:url('../style/resources/save.png') no-repeat;height:70px; width:70px;border: 0px solid;" value="">
     </form>
  </div>
 </div>

@@ -14,6 +14,6 @@
 
         Avatar <input type="file" name="avatar" id="fileToUpload"><br>
 
-      <input class="submit" type="submit" value="Register">
+      <input class="submit"  style="background:url('../style/resources/save.png') no-repeat;height:70px; width:70px;border: 0px solid;" type="submit" value="">
     </form>
 <div/>
