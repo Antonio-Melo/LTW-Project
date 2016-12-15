@@ -68,9 +68,9 @@ INSERT INTO comment VALUES (1, 1, 1, 'Fiquei satisfeito', 5);
 INSERT INTO comment VALUES (2, 1, 2, 'Razoavel', 3);
 INSERT INTO comment VALUES (3, 1, 1, 'Adorei', 4);
 
-INSERT INTO user VALUES (1,'Antonio', 'António Melo', 'antonio@gmail.com', '12345','1996-11-11','../database/avatars/default_avatar.png');
-INSERT INTO user VALUES (2,'Lazaro', 'Lazaro', 'lazaro@gmail.com', '12345','1946-11-11','../database/avatars/default_avatar.png');
-INSERT INTO user VALUES (3,'Margarida', 'Margarida', 'margarida@gmail.com', '12345','1946-11-11','../database/avatars/default_avatar.png');
+INSERT INTO user VALUES (1,'Antonio', 'António Melo', 'antonio@gmail.com', '$2y$12$nB43.L5SPQwH7EdNhq4EqO306gEcl4376coWjYWLJCY2ZJRYVVAPi','1996-11-11','../database/avatars/default_avatar.png');
+INSERT INTO user VALUES (2,'Lazaro', 'Lazaro', 'lazaro@gmail.com', '$2y$12$nB43.L5SPQwH7EdNhq4EqO306gEcl4376coWjYWLJCY2ZJRYVVAPi','1946-11-11','../database/avatars/default_avatar.png');
+INSERT INTO user VALUES (3,'Margarida', 'Margarida', 'margarida@gmail.com', '$2y$12$nB43.L5SPQwH7EdNhq4EqO306gEcl4376coWjYWLJCY2ZJRYVVAPi','1946-11-11','../database/avatars/default_avatar.png');
 
 INSERT INTO answer VALUES(1, 1, 1, 'foi pessimo');
 INSERT INTO answer VALUES(2, 2, 1, 'foi pessimo');
