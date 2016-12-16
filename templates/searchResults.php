@@ -16,9 +16,9 @@
                 $id = $restaurant["id"];
                 $name = $restaurant['name'];
             ?>
-            <li>
+            <h2><li>
                 <a href="../pages/listRestaurant.php?id=<?php echo $id ?>"> <?php echo $name ?> </a>
-            </li>
+            </li></h2>
         <?php }}else echo "No results found";?>
 
     </ul>
