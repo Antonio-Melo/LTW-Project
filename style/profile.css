@@ -73,13 +73,17 @@
     margin-top: 50px;
     padding: 20px;
 }
+img{
+    width: 70%;
+    height: 70%;
+}
 
 .restaurant {
     /*background-image: url('https://static.vecteezy.com/system/resources/previews/000/095/254/original/restaurant-menu-vector.jpg');
   background-size: 100% 100%;
    background-color: mediumspringgreen;
   border-top-style: solid;*/
-    width: 600px;
+    width: 50%;
     margin: 5px;
     padding: 20px;
     margin-left: 40px;
@@ -88,7 +92,7 @@
 }
 
 .restaurant h3 {
-    width: 130px;
+    width: 50%;
     position: relative;
     margin-left: 230px;
     font-size: 1.5em;
@@ -101,7 +105,7 @@
     padding: 10px;
     width: 170px;
     position: relative;
-    left: 35%;
+    left: 40%;
     height: 50px;
     border-collapse: collapse;
     outline-offset: 5px;
