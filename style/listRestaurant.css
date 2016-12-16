@@ -1,169 +1,162 @@
 @import url("../style/common.css");
-
-
-.comments{
+.comments {
     margin: 10px;
     padding: 10px;
     background-color: grey;
     border-radius: 5px;
 }
 
-.comments li a{
-  margin: 5px;
+.comments li a {
+    margin: 5px;
 }
 
 .listRestaurant li {
-  display: inline;
-  padding: 20px;
-  margin-right: 0;
+    display: inline;
+    padding: 20px;
+    margin-right: 0;
 }
 
 .listRestaurant a {
-  padding: 5px;
-  text-decoration: none;
-  border: 1px solid #999;
+    padding: 5px;
+    text-decoration: none;
+    border: 1px solid #999;
 }
 
-.answers{
-  border-radius: 5px;
-  padding: 20px;
-  margin: 25px;
-  margin-top: 15px;
-  background-color: ghostwhite;
+.answers {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 25px;
+    margin-top: 15px;
+    background-color: ghostwhite;
 }
 
 .delete-comment,
-.delete-answer{
-  border-radius:5px;
-   background-color: #ff8000;
-   color:black;
+.delete-answer {
+    border-radius: 5px;
+    background-color: #ff8000;
+    color: black;
 }
 
-.reply{
-background-color: #ff8000;
+.reply {
+    background-color: #ff8000;
 }
 
-.userAnswer h4 > a{
-  background-color:dodgerblue;
-  padding: 5px;
-  text-decoration: none;
-  border: 1px solid #999;
-  color: white;
-}
-.userAnswer{
-  margin-left: 10px;
-  padding: 0px;
-  border-collapse: collapse;
+.userAnswer h4>a {
+    background-color: dodgerblue;
+    padding: 5px;
+    text-decoration: none;
+    border: 1px solid #999;
+    color: white;
 }
 
-.user > h4 > li > a{
-  background-color:blue;
-   padding: 5px;
-  text-decoration: none;
-  border: 1px solid #999;
-  color: white;
+.userAnswer {
+    margin-left: 10px;
+    padding: 0px;
+    border-collapse: collapse;
 }
 
-.restaurantInfo{
-  text-align: center;
-  padding:20px;
+.user>h4>li>a {
+    background-color: blue;
+    padding: 5px;
+    text-decoration: none;
+    border: 1px solid #999;
+    color: white;
 }
 
-.CommentRestaurant{
-  color:black;
+.restaurantInfo {
+    width: 35%;
+    margin-left: 32.5%;
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 20px;
+    border-left-style: dashed;
+    border-right-style: dashed;
+    border-color: #334d4d;
 }
 
-.CommentButton{
-  border-radius: 5px 10px;
-}
-.CommentButton:hover{
-  color:blue;
-
+.CommentRestaurant {
+    color: black;
 }
 
-.comment{
-  text-align: center;
-  padding:20px;
+.CommentButton {
+    border-radius: 5px 10px;
+}
+
+.CommentButton:hover {
+    color: blue;
+}
+
+.comment {
+    text-align: center;
+    padding: 20px;
 }
 
 .listRestaurant a:hover {
-  color: grey;
-  background-color:#FFFF99;
+    color: grey;
+    background-color: #FFFF99;
 }
 
-.user > h4 > li > a:hover{
-  background-color:#33FFFF;
-
+.user>h4>li>a:hover {
+    background-color: #33FFFF;
 }
 
-
-.userAnswer h4 > a:hover{
-  background-color:#33FFFF;
+.userAnswer h4>a:hover {
+    background-color: #33FFFF;
 }
 
-.user span{
-  color: yellow;
+.user span {
+    color: yellow;
 }
 
-/*.restaurantInfo{
-  background-image: url('../style/resources/restaurant.jpg');
-  background-size: 60% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}*/
-
-.restaurantInfo h2{
-  font-family: serif;
-  font-size: 2em;
-  font-style: oblique;
-  margin-bottom: 50px;
-}
-.restaurantInfo h3{
-  border-style: double;
-  color:#0080FF;
-  padding: 5px;
-  width: 100px;
-  position: relative;
-  left: 46%;
-  margin-bottom: 10px;
-  border-collapse: collapse;
-  outline-offset: 5px;
-  outline: 2px solid #3399FF;
-  border: 2px solid #3333FF;
+.restaurantInfo {
+    padding-top: 100px;
 }
 
-.restaurantInfo h4{
- color:blue;
+.restaurantInfo h2 {
+    font-family: serif;
+    font-size: 2em;
+    font-style: oblique;
 }
 
-.restaurantInfo h5{
-  margin-top: 10px;
-  font-family: serif;
-  font-size: 1.2em;
-  font-style: normal;
+.restaurantInfo h3 {
+    color: #0080FF;
+    width: 40%;
+    margin-left: 30%;
+    border-collapse: collapse;
 }
 
-.Classification{
-  font-size: 1.5em;
-  font-style: italic;
+.restaurantInfo h4 {
+    color: blue;
 }
 
-.CommentRestaurant{
-  border:1px solid #d1c7ac;
-  background-color: grey;
-  background:#A0A0A0;
-	padding:3px;
-	margin-right:4px;
-	margin-bottom:8px;
-	font-family:tahoma, arial, sans-serif;
+.restaurantInfo h5 {
+    margin-top: 10px;
+    font-family: serif;
+    font-size: 1.2em;
+    font-style: normal;
 }
 
-.textanswer{
-  color:black;
-  margin: 20px;
-  font-style:italic;
-  font-size: 1.2em;
-  font-weight: bold;
+.Classification {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.CommentRestaurant {
+    border: 1px solid #d1c7ac;
+    background-color: grey;
+    background: #A0A0A0;
+    padding: 3px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+    font-family: tahoma, arial, sans-serif;
+}
+
+.textanswer {
+    color: black;
+    margin: 20px;
+    font-style: italic;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .rating {
@@ -183,8 +176,8 @@ background-color: #ff8000;
 }
 
 .rating:hover .rating-star:hover,
-.rating:hover .rating-star:hover ~ .rating-star,
-.rating-input:checked ~ .rating-star {
+.rating:hover .rating-star:hover~.rating-star,
+.rating-input:checked~.rating-star {
     background-position: 0 0;
 }
 
@@ -197,7 +190,3 @@ background-color: #ff8000;
     height: 16px;
     background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
 }
-
-
-
-

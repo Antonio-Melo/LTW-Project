@@ -4,6 +4,7 @@
 <?php
   echo '<div class="restaurantInfo">';
   echo '<h2>' . $restaurant['name'] . '</h2>';
+  echo '<p>' .'Rating : ' . $restaurant['rating'] . '</p>';
   echo '<h3>' .'Description' . '</h3>';
   echo '<h5>' . $restaurant['description'] .'</h5>';
   echo '<h4>' .'<hr width=10%>' . 'Hours' .'</h4>';
@@ -135,7 +136,7 @@ foreach ($comments as $comment) {
 <script>
     (function() {
         function initialize() {
-            var myLatlng = new google.maps.LatLng(<?php echo $lat_long; ?>),
+            var myLatlng = new google.maps.LatLng(<?php echo $lat_long ?>),
                 mapOptions = {
                     zoom: 18,
                     center: myLatlng
