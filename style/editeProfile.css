@@ -1,12 +1,17 @@
 @import url("../style/common.css");
-
-.editeprofile{
-    width: 500px;
-    height: 300px;
-    margin-left:20%;
-    padding: 10px;
-    border-style: inset;
-    
+.editeprofile {
+    /*border-style: inset;*/
+    background: white;
+    text-align: center;
+    width: 35%;
+    height: 30%;
+    position: relative;
+    left: 30%;
+    border-style: dashed;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: #334d4d;
+    border-top: none;
 }
 
 .editeprofile:after {
@@ -20,25 +25,19 @@
     opacity: 0.1;
 }
 
-.editeprofile label{
- display: block;
+.editeprofile label {
+    display: block;
     width: 400px;
     cursor: pointer;
     padding-right: 6px;
     padding-bottom: 10px;
     font-size: 1.1em;
     font-family: Helvetica, Arial, Sans-Serif;
-    color:blue;;
+    color: blue;
 }
 
-
-
-.link{
+.link {
     font-size: 1.5em;
     text-align: center;
-    text-decoration: underline;
+    color: brown;
 }
-.link:hover{
-  color:blue;
-}
-
