@@ -1,7 +1,7 @@
 <div class="wrapper">
  <div class="editeprofile">
      <div class="link">
-         <h4>  <?php  echo('@ '. $_SESSION['username']); ?></h4>
+         <h4>  <?php  echo('@'. $_SESSION['username']); ?></h4>
      </div>
    <form action="../action/editeProfile.php" method="post" enctype="multipart/form-data">
        <label>Name:
@@ -9,7 +9,7 @@
        </label>
 
       <label>Email:
-        <input type="e-mail" name="email" size=40" value="<?=$user['email']?>" required="required" ><br>
+        <input type="e-mail" name="email"  size="42" value="<?=$user['email']?>" required="required" ><br>
       </label>
 
       <label>New Password:
@@ -21,7 +21,7 @@
       </label>
 
       <label>Date of Birth:
-        <input type="date"name="dateBirth" value="<?=$user['dateBirth']?>" required ><br>
+        <input type="date"name="dateBirth" size="34" value="<?=$user['dateBirth']?>" required ><br>
       </label>
 
       <label>Avatar:
